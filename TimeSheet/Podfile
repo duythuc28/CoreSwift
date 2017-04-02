@@ -1,0 +1,22 @@
+platform :ios, '9.0'
+
+def shared_pods
+    pod 'Moya', '~> 8.0'
+    pod 'Moya-Argo', '~> 2.0'
+    pod 'SlideMenuControllerSwift', '~> 3.0'
+    pod 'IQKeyboardManagerSwift', '~> 4.0.6'
+    pod 'Material', '~> 2.0'
+    pod 'EZSwiftExtensions'
+    pod 'Curry' , '~> 3.0'
+end
+
+target 'TimeSheet_Preprod' do
+  use_frameworks!
+  shared_pods
+end
+
+target 'TimeSheet_Prod' do
+  use_frameworks!
+  shared_pods
+end
+
