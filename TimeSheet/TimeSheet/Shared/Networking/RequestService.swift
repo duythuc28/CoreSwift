@@ -8,17 +8,14 @@
 
 import Moya
 
-struct Credential {
-    let email: String
-    let password: String
-}
+
 
 enum RequestService {
     case login(credential : Credential)
 }
 
 extension RequestService: TargetType {
-    var baseURL: URL { return URL(string: Constants.BASE_URL )! }
+    var baseURL: URL { return URL(string: APIConstant.BASE_URL )! }
     
     var path: String {
         switch self {

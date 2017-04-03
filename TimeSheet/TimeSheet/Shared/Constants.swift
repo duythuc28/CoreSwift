@@ -5,8 +5,9 @@
 //  Created by iOS Developer on 4/2/17.
 //  Copyright © 2017 iOS Developer. All rights reserved.
 //
+import UIKit
 
-struct Constants {
+struct APIConstant {
     #if DEVELOPMENT
     static let BASE_URL = "http://dev.server.com/api/"
     #else
@@ -14,3 +15,4 @@ struct Constants {
     #endif
 }
 
+let UIAppDelegate                   = UIApplication.shared.delegate as! AppDelegate
