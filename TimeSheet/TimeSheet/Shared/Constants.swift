@@ -9,7 +9,7 @@ import UIKit
 
 struct APIConstant {
     #if DEVELOPMENT
-    static let BASE_URL = "http://demo6767839.mockable.io"
+    static let BASE_URL = "http://demo9490743.mockable.io"
     #else
     static let BASE_URL = "http://prod.server.com/api"
     #endif

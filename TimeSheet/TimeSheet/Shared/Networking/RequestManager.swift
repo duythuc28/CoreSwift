@@ -28,13 +28,19 @@ final class RequestManager {
         provider.request(.login(credential:credential )) { result in
             switch result {
             case let .success(response):
-                if let json = try? response.mapJSON() as? [String:Any], let token = json?["token"] as? String {
-                    let responseToken = Token(token: token)
-                    completion(.success(responseToken))
+                if let json = try? response.mapJSON() {
+                    if response.statusCode == 200 {
+                        let jsonResponse = json as! [String:Any]
+                        completion(.success(Token(token:(jsonResponse["token"] as! String))))
+                        
+                    } else {
+                        let errorResponse: ErrorResponse? = decode(json)
+                        completion(.failure(errorResponse!))
+                    }
                 }
+                
                 break
             case let .failure(error):
-                
                 if let json = try? error.response?.mapJSON(), let j: Any = json {
                     let errorResponse: ErrorResponse? = decode(j)
                     completion(.failure(errorResponse!))

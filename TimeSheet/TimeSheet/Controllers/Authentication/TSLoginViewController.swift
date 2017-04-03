@@ -23,15 +23,15 @@ class TSLoginViewController: UIViewController {
     
 
     @IBAction func loginButtonClick(_ sender: Any) {
+        // FIXME: This is a test login 
         RequestManager.shared.login(with: "admin@gmail.com", password: "123456") { (result) in
             switch result {
             case .success(let token):
                 Cached.token = token.token
-                print("Success : \(token.token)")
-                // TODO: Get user info here
+                print("Success : \(Cached.token)")
                 break
             case .failure(let error):
-                print(error.responseMessage)
+                print("Error : \(error.responseMessage)")
                 break
             }
         }
