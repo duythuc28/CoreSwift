@@ -20,7 +20,7 @@ final class RequestManager {
         
     }
     // MARK: - Shared Instance
-    static let sharedInstance: RequestManager = RequestManager()
+    static let shared: RequestManager = RequestManager()
     // MARK: - Method
     func login(with email: String, password: String, completion: @escaping (_ result: Result<Token>) -> Void) {
         let provider = MoyaProvider<RequestService>()
