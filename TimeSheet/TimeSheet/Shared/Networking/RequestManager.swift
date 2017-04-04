@@ -15,6 +15,11 @@ enum Result<Value> {
     case failure(ErrorResponse)
 }
 
+enum StatusCode<Value> {
+    case success(Value)
+    case failure(ErrorResponse)
+}
+
 final class RequestManager {
     private init () {
         
@@ -29,16 +34,15 @@ final class RequestManager {
             switch result {
             case let .success(response):
                 if let json = try? response.mapJSON() {
-                    if response.statusCode == 200 {
+                    // TODO: Refactor check status code after receiving data
+                    
+                    if self.isSuccess(statusCode: response.statusCode) {
                         guard let dictionary = json as? JSONDictionary, let token = Token(json: dictionary) else
-                        {
-                            return
-                        }
+                        { return }
                         completion(.success(token))
-                    } else {
-                        let errorResponse: ErrorResponse? = decode(json)
-                        completion(.failure(errorResponse!))
                     }
+                    guard let errorResponse: ErrorResponse = decode(json) else { return }
+                    completion(.failure(errorResponse))
                 }
                 
                 break
@@ -50,6 +54,11 @@ final class RequestManager {
                 break
             }
         }
+    }
+    
+    private func isSuccess(statusCode: Int) -> Bool{
+        if statusCode == 200 { return true }
+        return false
     }
     
 }
