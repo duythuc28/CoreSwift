@@ -22,17 +22,19 @@ final class RequestManager {
     // MARK: - Shared Instance
     static let shared: RequestManager = RequestManager()
     // MARK: - Method
-    func login(with email: String, password: String, completion: @escaping (_ result: Result<Token>) -> Void) {
+    
+    func login(email: String, password: String, completion: @escaping (_ result: Result<Token>) -> Void) {
         let provider = MoyaProvider<RequestService>()
-        let credential = Credential(email: email, password: password)
-        provider.request(.login(credential:credential )) { result in
+        provider.request(.login(credential:Credential(email: email, password: password) )) { result in
             switch result {
             case let .success(response):
                 if let json = try? response.mapJSON() {
                     if response.statusCode == 200 {
-                        let jsonResponse = json as! [String:Any]
-                        completion(.success(Token(token:(jsonResponse["token"] as! String))))
-                        
+                        guard let dictionary = json as? JSONDictionary, let token = Token(json: dictionary) else
+                        {
+                            return
+                        }
+                        completion(.success(token))
                     } else {
                         let errorResponse: ErrorResponse? = decode(json)
                         completion(.failure(errorResponse!))
@@ -42,8 +44,8 @@ final class RequestManager {
                 break
             case let .failure(error):
                 if let json = try? error.response?.mapJSON(), let j: Any = json {
-                    let errorResponse: ErrorResponse? = decode(j)
-                    completion(.failure(errorResponse!))
+                    guard let errorResponse: ErrorResponse = decode(j) else { return }
+                    completion(.failure(errorResponse))
                 }
                 break
             }

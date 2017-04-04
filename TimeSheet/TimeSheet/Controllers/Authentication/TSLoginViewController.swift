@@ -24,7 +24,7 @@ class TSLoginViewController: UIViewController {
 
     @IBAction func loginButtonClick(_ sender: Any) {
         // FIXME: This is a test login 
-        RequestManager.shared.login(with: "admin@gmail.com", password: "123456") { (result) in
+        RequestManager.shared.login(email: "admin@gmail.com", password: "123456") { (result) in
             switch result {
             case .success(let token):
                 Cached.token = token.token
