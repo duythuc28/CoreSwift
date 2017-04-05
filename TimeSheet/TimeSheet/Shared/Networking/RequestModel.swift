@@ -36,7 +36,7 @@ struct ErrorResponse: Decodable {
     
     static func decode(_ json: JSON) -> Decoded<ErrorResponse> {
         return curry(ErrorResponse.init)
-            <^> json <| "message"
-            <*> json <| "status"
+        <^> json <| "message"
+        <*> json <| "status"
     }
 }

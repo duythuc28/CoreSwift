@@ -19,6 +19,7 @@ struct Styles {
         static let VideoAuthorColor     = "#50526E"
         static let VideoDurationColor   = "#19D3AF"
         static let SeparateColor        = "#2B2A39"
+        static let leftMenu       = "#1C96D1"
     }
     
     struct Font {

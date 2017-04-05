@@ -9,13 +9,7 @@
 import Moya
 import Argo
 
-
 enum Result<Value> {
-    case success(Value)
-    case failure(ErrorResponse)
-}
-
-enum StatusCode<Value> {
     case success(Value)
     case failure(ErrorResponse)
 }
@@ -26,16 +20,14 @@ final class RequestManager {
     }
     // MARK: - Shared Instance
     static let shared: RequestManager = RequestManager()
-    // MARK: - Method
     
+    // MARK: - Request methods
     func login(email: String, password: String, completion: @escaping (_ result: Result<Token>) -> Void) {
         let provider = MoyaProvider<RequestService>()
         provider.request(.login(credential:Credential(email: email, password: password) )) { result in
             switch result {
             case let .success(response):
                 if let json = try? response.mapJSON() {
-                    // TODO: Refactor check status code after receiving data
-                    
                     if self.isSuccess(statusCode: response.statusCode) {
                         guard let dictionary = json as? JSONDictionary, let token = Token(json: dictionary) else
                         { return }
@@ -56,9 +48,9 @@ final class RequestManager {
         }
     }
     
+    // MARK: - Private methods
     private func isSuccess(statusCode: Int) -> Bool{
-        if statusCode == 200 { return true }
-        return false
+        return statusCode == 200
     }
     
 }
