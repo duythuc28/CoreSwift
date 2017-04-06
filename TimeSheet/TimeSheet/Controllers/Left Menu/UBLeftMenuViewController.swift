@@ -70,7 +70,7 @@ extension UBLeftMenuViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return TableViewStyles.headerHeight
     }
-    
+
 }
 
 // MARK: - Table view delegate
@@ -92,8 +92,6 @@ extension UBLeftMenuViewController: CollapsibleTableViewHeaderDelegate {
         let collapsed = !sections[section].collapsed
         // Toggle collapse
         sections[section].collapsed = collapsed
-        header.setCollapsed(collapsed: collapsed)
-        
         // Adjust the height of the rows inside the section
         tableView.beginUpdates()
         for i in 0 ..< sections[section].items.count {
