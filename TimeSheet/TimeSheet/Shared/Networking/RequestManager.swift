@@ -22,9 +22,9 @@ final class RequestManager {
     static let shared: RequestManager = RequestManager()
     
     // MARK: - Request methods
-    func login(email: String, password: String, completion: @escaping (_ result: Result<Token>) -> Void) {
+    func login(credential: Credential, completion: @escaping (_ result: Result<Token>) -> Void) {
         let provider = MoyaProvider<RequestService>()
-        provider.request(.login(credential:Credential(email: email, password: password) )) { result in
+        provider.request(.login(credential:credential)) { result in
             switch result {
             case let .success(response):
                 if let json = try? response.mapJSON() {

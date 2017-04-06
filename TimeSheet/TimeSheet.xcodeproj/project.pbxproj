@@ -814,7 +814,6 @@
 			baseConfigurationReference = 0CFD051346983E996835F3FC /* Pods-TimeSheet_Prod.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = W632CJZ6Y5;
 				INFOPLIST_FILE = "$(SRCROOT)/TimeSheet/SupportingFiles/TimeSheet_Prod_Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -834,7 +833,6 @@
 			baseConfigurationReference = 64DE9B03D43CA2BB047B44C5 /* Pods-TimeSheet_Prod.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = W632CJZ6Y5;
 				INFOPLIST_FILE = "$(SRCROOT)/TimeSheet/SupportingFiles/TimeSheet_Prod_Info.plist";

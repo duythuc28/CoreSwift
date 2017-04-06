@@ -14,11 +14,11 @@ struct Constants {
     
     static let SCALE_VALUE_WIDTH_DEVICE  = (DeviceType.IS_IPAD ? 2.4 : (DeviceType.IS_IPHONE_6 ? 1.171 : (DeviceType.IS_IPHONE_6P ? 1.293 : 1.0))) as CGFloat
     
-    static let FONT_SCALE_VALUE          = (DeviceType.IS_IPAD ? 1.5 : (DeviceType.IS_IPHONE_6P ? 1.27 : (DeviceType.IS_IPHONE_6 ? 1.15 : 1.0))) as CGFloat
+    static let FONT_SCALE_VALUE          = (DeviceType.IS_IPAD ? 1.5 : (DeviceType.IS_IPHONE_6P ? 1.10 : (DeviceType.IS_IPHONE_6 ? 1.0 : 0.8))) as CGFloat
     
-    static let RATIO_WIDTH               = (DeviceType.IS_IPHONE_4_OR_LESS ? 1.0 : ScreenSize.SCREEN_WIDTH / 320)
+    static let RATIO_WIDTH               = (DeviceType.IS_IPHONE_6 ? 1.0 : ScreenSize.SCREEN_WIDTH / 375.0)
     
-    static let RATIO_HEIGHT              = (DeviceType.IS_IPHONE_4_OR_LESS ? 1.0 : ScreenSize.SCREEN_HEIGHT / 568)
+    static let RATIO_HEIGHT              = (DeviceType.IS_IPHONE_6 ? 1.0 : ScreenSize.SCREEN_HEIGHT / 667.0)
     
 }
 
