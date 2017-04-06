@@ -21,7 +21,31 @@ class UBLoginViewController: UIViewController {
         setupView()
     }
     
-    private func setupView() {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - Action
+    @IBAction func loginButtonClick(_ sender: Any) {
+        if Utilities.isValidEmail(email: emailTextField.text!) {
+            emailTextField.isErrorRevealed = false
+            let credential = Credential(email: emailTextField.text!, password: passwordTextField.text!)
+            login(credential: credential)
+        } else {
+            emailTextField.isErrorRevealed = true
+        }
+    }
+}
+// MARK: - Private methods
+extension UBLoginViewController {
+    
+    fileprivate func setupView() {
         // Setup email textfield
         emailTextField.placeholderNormalColor = UIColor.white
         emailTextField.placeholderActiveColor = UIColor.white
@@ -43,26 +67,6 @@ class UBLoginViewController: UIViewController {
         signInButton.layer.cornerRadius = 20 * Constants.RATIO_WIDTH
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    // MARK: - Private methods
-    fileprivate func isValidEmail(email: String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: email)
-    }
-    
-    fileprivate func isValidPassword(password: String) -> Bool {
-        return true
-    }
-    
     fileprivate func login(credential: Credential) {
         RequestManager.shared.login(credential: credential) { (result) in
             switch result {
@@ -75,22 +79,11 @@ class UBLoginViewController: UIViewController {
             }
         }
     }
-    
-    // MARK: - Action
-    @IBAction func loginButtonClick(_ sender: Any) {
-        if isValidEmail(email: emailTextField.text!) {
-            emailTextField.isErrorRevealed = false
-            let credential = Credential(email: emailTextField.text!, password: passwordTextField.text!)
-            login(credential: credential)
-        } else {
-            emailTextField.isErrorRevealed = true
-        }
-    }
 }
 
 extension UBLoginViewController: TextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        (textField as? ErrorTextField)?.isErrorRevealed = !self.isValidEmail(email: textField.text!)
+        (textField as? ErrorTextField)?.isErrorRevealed = !Utilities.isValidEmail(email: textField.text!) && textField.text != ""
     }
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
