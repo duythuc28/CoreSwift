@@ -18,15 +18,16 @@ struct APIConstant {
 let UIAppDelegate                   = UIApplication.shared.delegate as! AppDelegate
 
 struct Storyboards {
-    static let homeStoryboard = "Home"
-    static let mainStoryboard = "Main"
+    static let home = "Home"
+    static let main = "Main"
 }
 
 struct ControllerIdentifier {
     static let home = "UBHomeViewController"
-    static let leftMenu = "UBLeftMenuViewController"
+    static let leftMenu = "TSLeftMenuViewController"
     static let login = "UBLoginViewController"
     static let homeNavigationController = "UBNavigationHomeViewController"
+    static let container = "UBContainerViewController"
 }
 
 struct CellIdentifier {
@@ -34,5 +35,6 @@ struct CellIdentifier {
 }
 
 struct NibName {
-    static let leftMenuCell = "UBLeftMenuCell"
+    static let leftMenuCell = "TSLeftMenuCell"
+    static let leftMenuHeader = "TSHeaderLeftMenu"
 }

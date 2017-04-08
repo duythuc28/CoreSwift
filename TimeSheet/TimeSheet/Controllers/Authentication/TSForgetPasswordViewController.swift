@@ -34,7 +34,7 @@ class TSForgetPasswordViewController: UIViewController {
     }
     
     @IBAction func backButtonClick(_ sender: Any) {
-        _ = self.navigationController?.popViewController(animated: true)
+         _ = navigationController?.popViewController(animated: true)
     }
     
 }

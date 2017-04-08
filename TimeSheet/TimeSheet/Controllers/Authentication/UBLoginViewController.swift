@@ -19,11 +19,18 @@ class UBLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        view.endEditing(true)
+        super.viewWillDisappear(animated)
     }
     
     override func didReceiveMemoryWarning() {
@@ -68,10 +75,14 @@ extension UBLoginViewController {
     }
     
     fileprivate func login(credential: Credential) {
-        RequestManager.shared.login(credential: credential) { (result) in
+        RequestManager.shared.login(credential: credential) { [unowned self] (result) in
             switch result {
             case .success(let token):
                 print ("Token \(token)")
+                // TODO: Get user info
+                let homeStoryboard = UIStoryboard(name: Storyboards.home , bundle: nil)
+                let containerViewController = homeStoryboard.instantiateViewController(withIdentifier: ControllerIdentifier.container)
+                self.navigationController?.pushViewController(containerViewController, animated: true)
                 break
             case .failure(let error):
                 print ("Error \(error.responseMessage)")
@@ -81,6 +92,7 @@ extension UBLoginViewController {
     }
 }
 
+// MARK: - Text field delegate
 extension UBLoginViewController: TextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         (textField as? ErrorTextField)?.isErrorRevealed = !Utilities.isValidEmail(email: textField.text!) && textField.text != ""

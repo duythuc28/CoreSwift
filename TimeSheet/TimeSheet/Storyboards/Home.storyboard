@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SX8-om-7xg">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SX8-om-7xg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,7 +11,7 @@
         <!--Container View Controller-->
         <scene sceneID="9eU-nA-4Xo">
             <objects>
-                <viewController id="SX8-om-7xg" customClass="UBContainerViewController" customModule="UbiqApp_Preprod" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UBContainerViewController" id="SX8-om-7xg" customClass="UBContainerViewController" customModule="TimeSheet_Preprod" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vCc-0h-fIb"/>
                         <viewControllerLayoutGuide type="bottom" id="0kM-xZ-ISU"/>
@@ -29,7 +29,7 @@
         <!--Left Menu View Controller-->
         <scene sceneID="hrg-2l-iZg">
             <objects>
-                <viewController storyboardIdentifier="UBLeftMenuViewController" id="a4I-fM-GdT" customClass="UBLeftMenuViewController" customModule="UbiqApp_Preprod" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UBLeftMenuViewController" id="a4I-fM-GdT" customClass="UBLeftMenuViewController" customModule="TimeSheet_Preprod" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y71-R0-X6T"/>
                         <viewControllerLayoutGuide type="bottom" id="HSC-cM-Qde"/>
@@ -63,10 +63,47 @@
             </objects>
             <point key="canvasLocation" x="1402" y="515"/>
         </scene>
+        <!--Left Menu View Controller-->
+        <scene sceneID="LkY-xl-mK4">
+            <objects>
+                <viewController storyboardIdentifier="TSLeftMenuViewController" automaticallyAdjustsScrollViewInsets="NO" id="qPU-D3-oUg" customClass="TSLeftMenuViewController" customModule="TimeSheet_Preprod" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8cW-Q0-Q4c"/>
+                        <viewControllerLayoutGuide type="bottom" id="6E0-Cz-Qne"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pq1-0L-MF4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q4B-At-flx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="qPU-D3-oUg" id="qQR-nB-E6o"/>
+                                    <outlet property="delegate" destination="qPU-D3-oUg" id="sSf-cf-Mw1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Q4B-At-flx" secondAttribute="trailing" id="ARH-9D-6m4"/>
+                            <constraint firstItem="Q4B-At-flx" firstAttribute="top" secondItem="pq1-0L-MF4" secondAttribute="top" id="CDt-tn-00n"/>
+                            <constraint firstAttribute="bottom" secondItem="Q4B-At-flx" secondAttribute="bottom" id="H5d-8i-ayX"/>
+                            <constraint firstItem="Q4B-At-flx" firstAttribute="leading" secondItem="pq1-0L-MF4" secondAttribute="leading" id="YdC-fS-qOJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Q4B-At-flx" id="mJ4-OM-ODf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OWC-34-wa9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2097" y="515"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="BNB-eP-deM">
             <objects>
-                <viewController storyboardIdentifier="UBHomeViewController" id="5HW-au-JGc" customClass="UBHomeViewController" customModule="UbiqApp_Preprod" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UBHomeViewController" id="5HW-au-JGc" customClass="UBHomeViewController" customModule="TimeSheet_Preprod" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2hz-iS-dOk"/>
                         <viewControllerLayoutGuide type="bottom" id="wJY-KP-0Xh"/>
@@ -91,7 +128,6 @@
         <!--Navigation Controller-->
         <scene sceneID="wh1-jZ-EKd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kAq-wt-L41" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="UBNavigationHomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="Ulh-MZ-Ttq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="oyB-cZ-Bk0">
@@ -103,6 +139,7 @@
                         <segue destination="5HW-au-JGc" kind="relationship" relationship="rootViewController" id="lXm-jx-eTS"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kAq-wt-L41" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1400.8" y="-161.46926536731635"/>
         </scene>

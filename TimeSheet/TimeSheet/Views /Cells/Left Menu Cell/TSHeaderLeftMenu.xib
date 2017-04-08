@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TSHeaderLeftMenu" customModule="TimeSheet_Preprod" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="175"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xm2-ag-yFh">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="175"/>
+                    <connections>
+                        <action selector="profileButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="hvP-wx-ZCs"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left_image_profile" translatesAutoresizingMaskIntoConstraints="NO" id="cQj-go-5Ap">
+                    <rect key="frame" x="152.5" y="21" width="70" height="70"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="cQj-go-5Ap" secondAttribute="height" multiplier="1:1" id="zhC-ME-Vcz"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allan Pham" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wG8-jO-wzg">
+                    <rect key="frame" x="38" y="106" width="300" height="24"/>
+                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="21"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="superroyaltechs@gmail.com" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmU-St-jia">
+                    <rect key="frame" x="38" y="138" width="300" height="17.5"/>
+                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.083515691359285535" green="0.11670652858448685" blue="0.26024125648601037" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wG8-jO-wzg" firstAttribute="top" secondItem="cQj-go-5Ap" secondAttribute="bottom" constant="15" id="1BA-Hg-S7Q"/>
+                <constraint firstAttribute="trailing" secondItem="xm2-ag-yFh" secondAttribute="trailing" id="4ER-EI-N4f"/>
+                <constraint firstItem="JmU-St-jia" firstAttribute="trailing" secondItem="wG8-jO-wzg" secondAttribute="trailing" id="K1I-rT-eJU"/>
+                <constraint firstItem="wG8-jO-wzg" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="K9j-9u-PR2"/>
+                <constraint firstItem="cQj-go-5Ap" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="LMn-wb-Mde"/>
+                <constraint firstItem="JmU-St-jia" firstAttribute="leading" secondItem="wG8-jO-wzg" secondAttribute="leading" id="OMG-Mc-kxz"/>
+                <constraint firstItem="JmU-St-jia" firstAttribute="top" secondItem="wG8-jO-wzg" secondAttribute="bottom" constant="8" id="TGD-Ht-scd"/>
+                <constraint firstItem="wG8-jO-wzg" firstAttribute="centerX" secondItem="cQj-go-5Ap" secondAttribute="centerX" id="Utm-Xa-Rpo"/>
+                <constraint firstItem="wG8-jO-wzg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="VOT-Q2-gbG"/>
+                <constraint firstItem="JmU-St-jia" firstAttribute="width" secondItem="wG8-jO-wzg" secondAttribute="width" id="W6U-Mq-JwX"/>
+                <constraint firstAttribute="bottom" secondItem="xm2-ag-yFh" secondAttribute="bottom" id="aMH-ZL-Giq"/>
+                <constraint firstItem="cQj-go-5Ap" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.4" id="cmU-zS-hy8"/>
+                <constraint firstItem="xm2-ag-yFh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gzH-Ul-pgl"/>
+                <constraint firstItem="cQj-go-5Ap" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.65" id="sOW-Yn-YD7"/>
+                <constraint firstItem="xm2-ag-yFh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wbk-o8-QCh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="emailLabel" destination="JmU-St-jia" id="TH4-Hr-eZh"/>
+                <outlet property="logoIcon" destination="cQj-go-5Ap" id="9jI-og-tF9"/>
+                <outlet property="profileName" destination="wG8-jO-wzg" id="0eV-CI-BfS"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="-193"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="left_image_profile" width="180" height="180"/>
+    </resources>
+</document>
