@@ -20,6 +20,10 @@ let UIAppDelegate                   = UIApplication.shared.delegate as! AppDeleg
 struct Storyboards {
     static let home = "Home"
     static let main = "Main"
+    static let authentication = "Authentication"
+    static let userProfile = "UserProfile"
+    static let timesheet = "TimeSheet"
+    static let checkIn = "CheckIn"
 }
 
 struct ControllerIdentifier {

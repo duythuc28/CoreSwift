@@ -30,6 +30,8 @@ class UBLoginViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         view.endEditing(true)
+        emailTextField.text = ""
+        passwordTextField.text = ""
         super.viewWillDisappear(animated)
     }
     

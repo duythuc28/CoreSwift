@@ -23,7 +23,7 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left_image_profile" translatesAutoresizingMaskIntoConstraints="NO" id="cQj-go-5Ap">
-                    <rect key="frame" x="152.5" y="21" width="70" height="70"/>
+                    <rect key="frame" x="153" y="21" width="70" height="70"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="cQj-go-5Ap" secondAttribute="height" multiplier="1:1" id="zhC-ME-Vcz"/>
@@ -32,17 +32,17 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allan Pham" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wG8-jO-wzg">
                     <rect key="frame" x="38" y="106" width="300" height="24"/>
                     <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="21"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="superroyaltechs@gmail.com" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmU-St-jia">
-                    <rect key="frame" x="38" y="138" width="300" height="17.5"/>
+                    <rect key="frame" x="38" y="138" width="300" height="18"/>
                     <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.083515691359285535" green="0.11670652858448685" blue="0.26024125648601037" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.083515691360000005" green="0.1167065286" blue="0.26024125650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="wG8-jO-wzg" firstAttribute="top" secondItem="cQj-go-5Ap" secondAttribute="bottom" constant="15" id="1BA-Hg-S7Q"/>
                 <constraint firstAttribute="trailing" secondItem="xm2-ag-yFh" secondAttribute="trailing" id="4ER-EI-N4f"/>

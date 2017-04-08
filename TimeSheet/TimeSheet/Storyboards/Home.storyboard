@@ -114,7 +114,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="9JB-2x-JSc">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="IsQ-72-ufd">
+                        <barButtonItem key="leftBarButtonItem" image="left_menu_burger" id="IsQ-72-ufd">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="menuButtonClick:" destination="5HW-au-JGc" id="ziS-O6-wFB"/>
                             </connections>
@@ -133,6 +134,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="oyB-cZ-Bk0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.53490519523620605" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -144,4 +146,7 @@
             <point key="canvasLocation" x="1400.8" y="-161.46926536731635"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="left_menu_burger" width="25" height="25"/>
+    </resources>
 </document>

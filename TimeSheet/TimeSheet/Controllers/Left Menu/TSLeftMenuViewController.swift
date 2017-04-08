@@ -50,16 +50,48 @@ extension TSLeftMenuViewController: UITableViewDataSource {
 // MARK: - Tableview delgate
 extension TSLeftMenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return TableViewStyles.cellHeight
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 200
+        return TableViewStyles.headerHeight
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = Bundle.main.loadNibNamed(NibName.leftMenuHeader, owner: nil, options: nil)?.first as! TSHeaderLeftMenu
+        headerView.configureHeader(profileName: "Allan Pham", email: "test01@gmail.com")
+        headerView.didSelectProfile = { 
+            // Go to profile
+            print("Profile picture click")
+        }
         return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            // Go to home
+            break
+        case 1:
+            // Go to check in
+            let storyBoard = UIStoryboard(name: Storyboards.checkIn, bundle: nil)
+            let controller = storyBoard.instantiateViewController(withIdentifier: "TSCheckInViewController")
+            _ = self.navigationController?.pushViewController(controller, animated: true)
+            break
+        case 2:
+            // Go to time sheet
+            let storyBoard = UIStoryboard(name: Storyboards.timesheet, bundle: nil)
+            let controller = storyBoard.instantiateViewController(withIdentifier: "TSTimeSheetViewController")
+            _ = self.navigationController?.pushViewController(controller, animated: true)
+            break
+        case 3:
+            // Logout
+            logout()
+            break
+        default:
+            break
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -70,10 +102,12 @@ extension TSLeftMenuViewController {
     }
     
     fileprivate struct TableViewStyles {
-//        static let topPadding:CGFloat = 50
-//        static let headerHeight:CGFloat = 44.0
-//        static let cellHeight: CGFloat = 44.0
+        static let headerHeight:CGFloat = 180 * Constants.RATIO_HEIGHT
+        static let cellHeight: CGFloat = 60 * Constants.RATIO_HEIGHT
     }
     
-//    fileprivate func 
+    fileprivate func logout() {
+        // TODO: Implement web service for logout user
+        _ = self.navigationController?.popToRootViewController(animated: true)
+    }
 }
