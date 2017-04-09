@@ -21,10 +21,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HIX-fE-oJh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dNe-Aa-KfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="150"/>
+            <point key="canvasLocation" x="1008.8" y="149.77511244377811"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W0x-My-ZQc">
+            <objects>
+                <navigationController storyboardIdentifier="TSTimeSheetNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="W1y-H5-kG4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nmz-zG-Iex">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.53490519520000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ecs-0s-U1I" kind="relationship" relationship="rootViewController" id="Njb-d2-ouf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MpA-4i-ehH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.599999999999994" y="149.77511244377811"/>
         </scene>
     </scenes>
 </document>

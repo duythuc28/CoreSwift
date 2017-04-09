@@ -21,9 +21,15 @@ class TSLeftMenuViewController: UIViewController {
         return data
     }()
     
+    var homeNavigationController: UINavigationController!
+    var checkInViewController: UINavigationController!
+    var timeSheetViewController: UINavigationController!
+    var userProfileViewController: UINavigationController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupViewController()
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,34 +68,14 @@ extension TSLeftMenuViewController: UITableViewDelegate {
         headerView.configureHeader(profileName: "Allan Pham", email: "test01@gmail.com")
         headerView.didSelectProfile = { 
             // Go to profile
-            print("Profile picture click")
+            self.slideMenuController()?.changeMainViewController(self.userProfileViewController, close: true)
         }
         return headerView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
-            // Go to home
-            break
-        case 1:
-            // Go to check in
-            let storyBoard = UIStoryboard(name: Storyboards.checkIn, bundle: nil)
-            let controller = storyBoard.instantiateViewController(withIdentifier: "TSCheckInViewController")
-            _ = self.navigationController?.pushViewController(controller, animated: true)
-            break
-        case 2:
-            // Go to time sheet
-            let storyBoard = UIStoryboard(name: Storyboards.timesheet, bundle: nil)
-            let controller = storyBoard.instantiateViewController(withIdentifier: "TSTimeSheetViewController")
-            _ = self.navigationController?.pushViewController(controller, animated: true)
-            break
-        case 3:
-            // Logout
-            logout()
-            break
-        default:
-            break
+        if let menu = LeftMenu(rawValue: indexPath.row) {
+            self.changeViewController(menu)
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -97,8 +83,30 @@ extension TSLeftMenuViewController: UITableViewDelegate {
 
 // MARK: - Private methods
 extension TSLeftMenuViewController {
+    
+    fileprivate enum LeftMenu: Int {
+        case home = 0
+        case checkin
+        case timesheet
+        case logout
+    }
+    
     fileprivate func setupTableView() {
         tableView.register(UINib(nibName: NibName.leftMenuCell, bundle: nil), forCellReuseIdentifier: CellIdentifier.leftMenu)
+    }
+    
+    fileprivate func setupViewController() {
+        let homeStoryboard = UIStoryboard(name: Storyboards.home, bundle: nil)
+        homeNavigationController = homeStoryboard.instantiateViewController(withIdentifier: ControllerIdentifier.homeNavigationController) as! UINavigationController
+        
+        let timeSheetStoryboard = UIStoryboard(name: Storyboards.timesheet, bundle: nil)
+        timeSheetViewController = timeSheetStoryboard.instantiateViewController(withIdentifier: ControllerIdentifier.timesheetNavigation) as! UINavigationController
+        
+        let checkInStoryboard = UIStoryboard(name: Storyboards.checkIn, bundle: nil)
+        checkInViewController = checkInStoryboard.instantiateViewController(withIdentifier: ControllerIdentifier.checkinNavigation) as! UINavigationController
+        
+        let userProfileStoryboard = UIStoryboard(name: Storyboards.userProfile, bundle: nil)
+        userProfileViewController = userProfileStoryboard.instantiateViewController(withIdentifier: ControllerIdentifier.userProfileNavigation) as! UINavigationController
     }
     
     fileprivate struct TableViewStyles {
@@ -109,5 +117,18 @@ extension TSLeftMenuViewController {
     fileprivate func logout() {
         // TODO: Implement web service for logout user
         _ = self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    fileprivate func changeViewController(_ menu: LeftMenu) {
+        switch menu {
+        case .home:
+            self.slideMenuController()?.changeMainViewController(self.homeNavigationController, close: true)
+        case .timesheet:
+            self.slideMenuController()?.changeMainViewController(self.timeSheetViewController, close: true)
+        case .checkin:
+            self.slideMenuController()?.changeMainViewController(self.checkInViewController, close: true)
+        case .logout:
+            logout()
+        }
     }
 }

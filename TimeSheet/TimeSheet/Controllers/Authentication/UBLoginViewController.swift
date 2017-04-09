@@ -65,6 +65,7 @@ extension UBLoginViewController {
         emailTextField.detail = "Error, incorrect email!"
         emailTextField.detailColor = UIColor.red
         emailTextField.delegate = self
+        
         // Setup password textfield
         passwordTextField.textColor = UIColor.white
         passwordTextField.placeholderActiveColor = UIColor.white
@@ -77,6 +78,7 @@ extension UBLoginViewController {
     }
     
     fileprivate func login(credential: Credential) {
+        signInButton.isEnabled = false
         RequestManager.shared.login(credential: credential) { [unowned self] (result) in
             switch result {
             case .success(let token):
@@ -90,6 +92,7 @@ extension UBLoginViewController {
                 print ("Error \(error.responseMessage)")
                 break
             }
+            self.signInButton.isEnabled = true
         }
     }
 }

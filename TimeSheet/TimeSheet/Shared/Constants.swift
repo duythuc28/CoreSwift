@@ -32,6 +32,12 @@ struct ControllerIdentifier {
     static let login = "UBLoginViewController"
     static let homeNavigationController = "UBNavigationHomeViewController"
     static let container = "UBContainerViewController"
+    static let timesheet = "TSTimeSheetViewController"
+    static let timesheetNavigation = "TSTimeSheetNavigationViewController"
+    static let checkin = "TSCheckInViewController"
+    static let checkinNavigation = "TSCheckInNavigationViewController"
+    static let userProfile = "TSUserProfileViewController"
+    static let userProfileNavigation = "TSUserProfileNavigationViewController"
 }
 
 struct CellIdentifier {
