@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ZP-ft-OVe" customClass="ErrorTextField" customModule="Material">
-                                                <rect key="frame" x="28" y="251.5" width="319" height="30"/>
+                                                <rect key="frame" x="28" y="285" width="319" height="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -44,7 +44,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2NI-TB-tXZ" customClass="TextField" customModule="Material">
-                                                <rect key="frame" x="28.5" y="335" width="319" height="30"/>
+                                                <rect key="frame" x="28.5" y="330" width="319" height="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -70,7 +70,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfL-b0-Vv8">
-                                                <rect key="frame" x="160" y="380" width="187.5" height="25"/>
+                                                <rect key="frame" x="160" y="375" width="187.5" height="25"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <inset key="titleEdgeInsets" minX="-35" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -86,6 +86,7 @@
                                         <color key="backgroundColor" red="0.21795197823808388" green="0.29838941134854757" blue="0.64940900259067358" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="9Nw-bl-TxG" firstAttribute="centerX" secondItem="RHl-ir-TqJ" secondAttribute="centerX" id="3pI-pq-ZUC"/>
+                                            <constraint firstItem="2NI-TB-tXZ" firstAttribute="top" secondItem="6ZP-ft-OVe" secondAttribute="bottom" constant="15" id="5Er-id-sHx"/>
                                             <constraint firstItem="2NI-TB-tXZ" firstAttribute="width" secondItem="6ZP-ft-OVe" secondAttribute="width" id="B2d-lA-gj1"/>
                                             <constraint firstItem="sfL-b0-Vv8" firstAttribute="width" secondItem="RHl-ir-TqJ" secondAttribute="width" multiplier="0.5" id="EnL-DV-icf"/>
                                             <constraint firstItem="sfL-b0-Vv8" firstAttribute="trailing" secondItem="2NI-TB-tXZ" secondAttribute="trailing" id="M32-dj-Nze"/>
@@ -93,9 +94,8 @@
                                             <constraint firstItem="6ZP-ft-OVe" firstAttribute="centerX" secondItem="RHl-ir-TqJ" secondAttribute="centerX" id="SRO-oQ-X67"/>
                                             <constraint firstAttribute="bottom" secondItem="9Nw-bl-TxG" secondAttribute="bottom" constant="80" id="Vw6-1w-K4M"/>
                                             <constraint firstItem="2NI-TB-tXZ" firstAttribute="centerX" secondItem="6ZP-ft-OVe" secondAttribute="centerX" id="cHX-DP-4rb"/>
-                                            <constraint firstItem="2NI-TB-tXZ" firstAttribute="centerY" secondItem="RHl-ir-TqJ" secondAttribute="centerY" multiplier="1.05" id="ieu-o6-n54"/>
                                             <constraint firstItem="sfL-b0-Vv8" firstAttribute="top" secondItem="2NI-TB-tXZ" secondAttribute="bottom" constant="15" id="jnU-qT-Dhz"/>
-                                            <constraint firstItem="6ZP-ft-OVe" firstAttribute="centerY" secondItem="RHl-ir-TqJ" secondAttribute="centerY" multiplier="0.8" id="lMi-Ch-5FX"/>
+                                            <constraint firstItem="6ZP-ft-OVe" firstAttribute="centerY" secondItem="RHl-ir-TqJ" secondAttribute="centerY" multiplier="0.9" id="lMi-Ch-5FX"/>
                                             <constraint firstItem="9Nw-bl-TxG" firstAttribute="width" secondItem="2NI-TB-tXZ" secondAttribute="width" id="xnJ-yI-Stu"/>
                                         </constraints>
                                     </view>
@@ -122,6 +122,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="6ZP-ft-OVe" id="X9d-Zr-NEf"/>
                         <outlet property="passwordTextField" destination="2NI-TB-tXZ" id="viQ-U1-bI4"/>
+                        <outlet property="passwordTopConstraint" destination="5Er-id-sHx" id="2Rh-wO-aam"/>
                         <outlet property="signInButton" destination="9Nw-bl-TxG" id="dhX-NB-a6D"/>
                     </connections>
                 </viewController>

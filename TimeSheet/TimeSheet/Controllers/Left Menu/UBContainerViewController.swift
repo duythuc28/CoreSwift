@@ -17,6 +17,9 @@ class UBContainerViewController: SlideMenuController {
             self.mainViewController = homeNavigationController
         }
         if let controller = UIStoryboard(name: Storyboards.home, bundle: nil).instantiateViewController(withIdentifier: ControllerIdentifier.leftMenu) as? TSLeftMenuViewController {
+            SlideMenuOptions.leftViewWidth = 290 * Constants.RATIO_WIDTH
+            SlideMenuOptions.hideStatusBar = false
+            SlideMenuOptions.contentViewScale = 1
             self.leftViewController = controller
         }
         super.awakeFromNib()

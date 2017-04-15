@@ -14,7 +14,13 @@ class UBLoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: ErrorTextField!
     @IBOutlet weak var passwordTextField: TextField!
     @IBOutlet weak var signInButton: UIButton!
-    
+    @IBOutlet weak var passwordTopConstraint: NSLayoutConstraint!
+    var isEmailError: Bool = false {
+        didSet {
+            self.emailTextField.isErrorRevealed = isEmailError
+            isEmailError == true ? move(position: 25) : move(position: 15)
+        }
+    }
     // MARK: - App life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,12 +49,14 @@ class UBLoginViewController: UIViewController {
     // MARK: - Action
     @IBAction func loginButtonClick(_ sender: Any) {
         if Utilities.isValidEmail(email: emailTextField.text!) {
-            emailTextField.isErrorRevealed = false
+            isEmailError = false
             let credential = Credential(email: emailTextField.text!, password: passwordTextField.text!)
             login(credential: credential)
         } else {
-            emailTextField.isErrorRevealed = true
+            isEmailError = true
         }
+//        let credential = Credential(email: emailTextField.text!, password: passwordTextField.text!)
+//        login(credential: credential)
     }
 }
 // MARK: - Private methods
@@ -58,6 +66,7 @@ extension UBLoginViewController {
         // Setup email textfield
         emailTextField.placeholderNormalColor = UIColor.white
         emailTextField.placeholderActiveColor = UIColor.white
+        emailTextField.placeholderAnimation = .hidden
         emailTextField.dividerActiveColor = UIColor.white
         emailTextField.dividerNormalColor = UIColor.white
         emailTextField.textColor = UIColor.white
@@ -70,11 +79,22 @@ extension UBLoginViewController {
         passwordTextField.textColor = UIColor.white
         passwordTextField.placeholderActiveColor = UIColor.white
         passwordTextField.placeholderNormalColor = UIColor.white
+        passwordTextField.placeholderAnimation = .hidden
         passwordTextField.dividerActiveColor = UIColor.white
         passwordTextField.dividerNormalColor = UIColor.white
         passwordTextField.addLeftIcon(UIImage(named: "login_password"), frame: CGRect(x: 0, y: 0, w: 28, h: 28), imageSize: CGSize(width: 28, height: 28))
         // Sign In button
         signInButton.layer.cornerRadius = 20 * Constants.RATIO_WIDTH
+    }
+    
+    fileprivate func move(position: CGFloat) {
+        UIView.animate(withDuration: 0.25,
+                       delay: 0.0,
+                       options: UIViewAnimationOptions.curveEaseIn,
+                       animations: { [unowned self] () -> Void in
+                        self.passwordTopConstraint.constant = position
+                        self.view?.layoutIfNeeded()
+        }, completion: nil)
     }
     
     fileprivate func login(credential: Credential) {
@@ -100,11 +120,11 @@ extension UBLoginViewController {
 // MARK: - Text field delegate
 extension UBLoginViewController: TextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        (textField as? ErrorTextField)?.isErrorRevealed = !Utilities.isValidEmail(email: textField.text!) && textField.text != ""
+        isEmailError = !Utilities.isValidEmail(email: textField.text!) && textField.text != ""
     }
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        (textField as? ErrorTextField)?.isErrorRevealed = false
+        isEmailError = false
         return true
     }
 //

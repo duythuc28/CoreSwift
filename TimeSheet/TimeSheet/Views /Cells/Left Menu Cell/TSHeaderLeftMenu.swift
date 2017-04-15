@@ -9,13 +9,7 @@
 import UIKit
 
 class TSHeaderLeftMenu: UIView {
-    @IBOutlet weak var logoIcon: UIImageView! {
-        didSet {
-//            logoIcon.layoutIfNeeded()
-//            logoIcon.layer.cornerRadius = logoIcon.frame.size.width/2
-//            logoIcon.clipsToBounds = true
-        }
-    }
+    @IBOutlet weak var logoIcon: UIImageView! 
     @IBOutlet weak var profileName: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     var didSelectProfile:(() -> ())?
@@ -27,6 +21,13 @@ class TSHeaderLeftMenu: UIView {
         self.profileName.text! = profileName
         self.emailLabel.text! = email
         self.logoIcon.image = UIImage(named: imageName)
+        logoIcon.layoutIfNeeded()
+        logoIcon.layer.cornerRadius = logoIcon.frame.size.width/2
+        logoIcon.clipsToBounds = true
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
         logoIcon.layoutIfNeeded()
         logoIcon.layer.cornerRadius = logoIcon.frame.size.width/2
         logoIcon.clipsToBounds = true

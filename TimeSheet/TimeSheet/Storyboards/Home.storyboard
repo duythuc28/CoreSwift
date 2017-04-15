@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -76,20 +77,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q4B-At-flx">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="qPU-D3-oUg" id="qQR-nB-E6o"/>
                                     <outlet property="delegate" destination="qPU-D3-oUg" id="sSf-cf-Mw1"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mv1-R4-xKV">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBs-xL-0jv">
+                                        <rect key="frame" x="25" y="18" width="187.5" height="25"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="100" maxY="0.0"/>
+                                        <state key="normal" title="Log out" image="left_menu_logout">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="MBs-xL-0jv" firstAttribute="width" secondItem="Mv1-R4-xKV" secondAttribute="width" multiplier="0.5" id="0Ht-tr-3yR"/>
+                                    <constraint firstItem="MBs-xL-0jv" firstAttribute="centerY" secondItem="Mv1-R4-xKV" secondAttribute="centerY" id="NKz-Ex-KrN"/>
+                                    <constraint firstItem="MBs-xL-0jv" firstAttribute="leading" secondItem="Mv1-R4-xKV" secondAttribute="leading" constant="25" id="Usw-P0-Iyf"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="6E0-Cz-Qne" firstAttribute="top" secondItem="Mv1-R4-xKV" secondAttribute="bottom" id="0P4-sT-QaB"/>
+                            <constraint firstItem="Mv1-R4-xKV" firstAttribute="left" secondItem="pq1-0L-MF4" secondAttribute="left" id="3LY-HK-dpD"/>
                             <constraint firstAttribute="trailing" secondItem="Q4B-At-flx" secondAttribute="trailing" id="ARH-9D-6m4"/>
                             <constraint firstItem="Q4B-At-flx" firstAttribute="top" secondItem="pq1-0L-MF4" secondAttribute="top" id="CDt-tn-00n"/>
-                            <constraint firstAttribute="bottom" secondItem="Q4B-At-flx" secondAttribute="bottom" id="H5d-8i-ayX"/>
+                            <constraint firstAttribute="bottom" secondItem="Q4B-At-flx" secondAttribute="bottom" constant="60" id="H5d-8i-ayX"/>
                             <constraint firstItem="Q4B-At-flx" firstAttribute="leading" secondItem="pq1-0L-MF4" secondAttribute="leading" id="YdC-fS-qOJ"/>
+                            <constraint firstItem="Mv1-R4-xKV" firstAttribute="top" secondItem="Q4B-At-flx" secondAttribute="bottom" id="ZDe-MZ-r9h"/>
+                            <constraint firstAttribute="right" secondItem="Mv1-R4-xKV" secondAttribute="right" id="e35-TP-pav"/>
                         </constraints>
                     </view>
                     <connections>
@@ -98,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWC-34-wa9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2097" y="515"/>
+            <point key="canvasLocation" x="2096.8000000000002" y="514.99250374812596"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="BNB-eP-deM">
@@ -135,6 +159,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.53490519523620605" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -148,5 +175,6 @@
     </scenes>
     <resources>
         <image name="left_menu_burger" width="25" height="25"/>
+        <image name="left_menu_logout" width="25" height="25"/>
     </resources>
 </document>

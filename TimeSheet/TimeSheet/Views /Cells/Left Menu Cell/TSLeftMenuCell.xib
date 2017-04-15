@@ -19,19 +19,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P2h-r3-IZh">
-                        <rect key="frame" x="10" y="12" width="30" height="30"/>
+                        <rect key="frame" x="20" y="20.5" width="25" height="25"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="9ih-Ey-3OD"/>
+                            <constraint firstAttribute="height" constant="25" id="9ih-Ey-3OD"/>
                             <constraint firstAttribute="width" secondItem="P2h-r3-IZh" secondAttribute="height" multiplier="1:1" id="eor-I8-tr8"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5c-dR-EX2">
-                        <rect key="frame" x="60" y="17" width="204" height="21"/>
+                        <rect key="frame" x="60" y="22.5" width="204" height="21"/>
                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                         <color key="textColor" red="0.28932561528497414" green="0.28932561528497414" blue="0.28932561528497414" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="deB-W1-3Cj">
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="deB-W1-3Cj">
                         <rect key="frame" x="0.0" y="55" width="284" height="1"/>
                         <color key="backgroundColor" red="0.076747659753028177" green="0.10724874333167324" blue="0.23915155441347147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -41,13 +41,13 @@
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="A5c-dR-EX2" firstAttribute="leading" secondItem="P2h-r3-IZh" secondAttribute="trailing" constant="20" id="5Q7-3n-Smx"/>
+                    <constraint firstItem="A5c-dR-EX2" firstAttribute="leading" secondItem="P2h-r3-IZh" secondAttribute="trailing" constant="15" id="5Q7-3n-Smx"/>
                     <constraint firstAttribute="bottom" secondItem="deB-W1-3Cj" secondAttribute="bottom" id="BG0-sX-Rie"/>
                     <constraint firstAttribute="trailing" secondItem="A5c-dR-EX2" secondAttribute="trailing" constant="20" id="BKE-bx-obL"/>
                     <constraint firstItem="A5c-dR-EX2" firstAttribute="centerY" secondItem="P2h-r3-IZh" secondAttribute="centerY" id="KMR-i3-pce"/>
                     <constraint firstAttribute="trailing" secondItem="deB-W1-3Cj" secondAttribute="trailing" id="ZII-OF-IK7"/>
-                    <constraint firstItem="P2h-r3-IZh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cxF-8I-EZk"/>
-                    <constraint firstItem="P2h-r3-IZh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="oQU-KW-xg5"/>
+                    <constraint firstItem="P2h-r3-IZh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="5" id="cxF-8I-EZk"/>
+                    <constraint firstItem="P2h-r3-IZh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="oQU-KW-xg5"/>
                     <constraint firstItem="deB-W1-3Cj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zaw-0G-qgX"/>
                 </constraints>
             </tableViewCellContentView>

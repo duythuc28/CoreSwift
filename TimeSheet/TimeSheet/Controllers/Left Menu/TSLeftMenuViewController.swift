@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
 class TSLeftMenuViewController: UIViewController {
 
@@ -16,8 +17,7 @@ class TSLeftMenuViewController: UIViewController {
     lazy var listMenu: [LeftMenuData] = {
         let data = [LeftMenuData(imageName: "left_menu_home", title: "Home"),
                     LeftMenuData(imageName: "left_menu_checkin", title: "Check In"),
-                    LeftMenuData(imageName: "left_menu_timesheet", title: "Time Sheet"),
-                    LeftMenuData(imageName: "left_menu_logout", title: "Log out")]
+                    LeftMenuData(imageName: "left_menu_timesheet", title: "Time Sheet")]
         return data
     }()
     
@@ -88,7 +88,6 @@ extension TSLeftMenuViewController {
         case home = 0
         case checkin
         case timesheet
-        case logout
     }
     
     fileprivate func setupTableView() {
@@ -127,8 +126,6 @@ extension TSLeftMenuViewController {
             self.slideMenuController()?.changeMainViewController(self.timeSheetViewController, close: true)
         case .checkin:
             self.slideMenuController()?.changeMainViewController(self.checkInViewController, close: true)
-        case .logout:
-            logout()
         }
     }
 }
