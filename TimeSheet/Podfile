@@ -8,6 +8,7 @@ def shared_pods
     pod 'Material', '~> 2.0'
     pod 'EZSwiftExtensions'
     pod 'Curry' , '~> 3.0'
+    pod 'ReachabilitySwift', '~> 3'
 end
 
 target 'TimeSheet_Preprod' do

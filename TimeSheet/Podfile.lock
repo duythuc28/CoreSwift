@@ -18,6 +18,7 @@ PODS:
   - Moya/Core (8.0.3):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
+  - ReachabilitySwift (3)
   - Result (3.2.1)
   - Runes (4.0.1)
   - SlideMenuControllerSwift (3.0.1)
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - Material (~> 2.0)
   - Moya (~> 8.0)
   - Moya-Argo (~> 2.0)
+  - ReachabilitySwift (~> 3)
   - SlideMenuControllerSwift (~> 3.0)
 
 SPEC CHECKSUMS:
@@ -40,10 +42,11 @@ SPEC CHECKSUMS:
   Material: af607a7ec0e9978ef85cf189a3d8ceeeb650400f
   Moya: d3721622e3cc0cc2f038d69a258686f0b66e7252
   Moya-Argo: a925d2556b711121078ed15da8586965fbc5f7e3
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
   Runes: ff20f163b478ac2c0e18158d6086fd5b1997f983
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
 
-PODFILE CHECKSUM: 7b8b37448c5b564f3088ec5080e053fbd4352a27
+PODFILE CHECKSUM: bccee1c326eeed08d9f03a5bdc98d6f37356cd00
 
 COCOAPODS: 1.2.0

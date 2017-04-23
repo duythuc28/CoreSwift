@@ -12,6 +12,8 @@
 		5746DC8B094AB5A1C51FE3D0 /* Pods_TimeSheet_Preprod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2707F4D87B6C65CE955E168B /* Pods_TimeSheet_Preprod.framework */; };
 		6A11374D1E96BC3300BF14B3 /* TSForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11374C1E96BC3300BF14B3 /* TSForgetPasswordViewController.swift */; };
 		6A11374E1E96BC3300BF14B3 /* TSForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11374C1E96BC3300BF14B3 /* TSForgetPasswordViewController.swift */; };
+		6A4396051EAD24C600C51336 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4396041EAD24C600C51336 /* ReachabilityManager.swift */; };
+		6A4396061EAD24C600C51336 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4396041EAD24C600C51336 /* ReachabilityManager.swift */; };
 		6A7C5C901E915A7900396AC7 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C5C8F1E915A7900396AC7 /* RequestManager.swift */; };
 		6A7C5C911E915A7900396AC7 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C5C8F1E915A7900396AC7 /* RequestManager.swift */; };
 		6A7FA2801E96BA500043A25D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7FA27F1E96BA500043A25D /* Utilities.swift */; };
@@ -110,6 +112,7 @@
 		5F06976C597F3508418069CA /* Pods_TimeSheet_Prod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeSheet_Prod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64DE9B03D43CA2BB047B44C5 /* Pods-TimeSheet_Prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet_Prod.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeSheet_Prod/Pods-TimeSheet_Prod.release.xcconfig"; sourceTree = "<group>"; };
 		6A11374C1E96BC3300BF14B3 /* TSForgetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		6A4396041EAD24C600C51336 /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		6A7C5C8F1E915A7900396AC7 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		6A7FA27F1E96BA500043A25D /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6A8405AA1E996DDF00058168 /* UserProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
@@ -417,6 +420,7 @@
 		6AC17F431E90DCDF00013193 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				6A4396041EAD24C600C51336 /* ReachabilityManager.swift */,
 				6A8A84461E95EEC700290D63 /* RequestModel.swift */,
 				6AC17F511E91106200013193 /* RequestService.swift */,
 				6A7C5C8F1E915A7900396AC7 /* RequestManager.swift */,
@@ -549,7 +553,7 @@
 						TestTargetID = 6A86F5D71E90183E0034C28D;
 					};
 					6A86F6091E90188C0034C28D = {
-						DevelopmentTeam = W632CJZ6Y5;
+						DevelopmentTeam = XC6P3RXJV8;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -728,6 +732,7 @@
 				6A8A84561E95EEFE00290D63 /* UBLeftMenuHeaderView.swift in Sources */,
 				6AC17F4C1E90F1BC00013193 /* User.swift in Sources */,
 				6A8A84441E95EEAE00290D63 /* UBLeftMenuViewController.swift in Sources */,
+				6A4396051EAD24C600C51336 /* ReachabilityManager.swift in Sources */,
 				6A85B8DC1E98B8A000F9706F /* TSHeaderLeftMenu.swift in Sources */,
 				6A85B8CD1E98933000F9706F /* TSLeftMenuViewController.swift in Sources */,
 				6A8A84471E95EEC700290D63 /* RequestModel.swift in Sources */,
@@ -777,6 +782,7 @@
 				6A8A84571E95EEFE00290D63 /* UBLeftMenuHeaderView.swift in Sources */,
 				6AC17F4D1E90F1BC00013193 /* User.swift in Sources */,
 				6A8A84451E95EEAE00290D63 /* UBLeftMenuViewController.swift in Sources */,
+				6A4396061EAD24C600C51336 /* ReachabilityManager.swift in Sources */,
 				6A85B8DD1E98B8A000F9706F /* TSHeaderLeftMenu.swift in Sources */,
 				6A85B8CE1E98933000F9706F /* TSLeftMenuViewController.swift in Sources */,
 				6A8A84481E95EEC700290D63 /* RequestModel.swift in Sources */,
@@ -1013,15 +1019,15 @@
 			baseConfigurationReference = 41FCD84CB9622E284AF3ABFB /* Pods-TimeSheet_Preprod.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = W632CJZ6Y5;
+				DEVELOPMENT_TEAM = XC6P3RXJV8;
 				INFOPLIST_FILE = "$(SRCROOT)/TimeSheet/SupportingFiles/TimeSheet_Preprod_Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEVELOPMENT\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hsu.timesheet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f4e282dd-4da1-49c0-9afa-29fdc78bc40f";
-				PROVISIONING_PROFILE_SPECIFIER = "Dev provisioning";
+				PROVISIONING_PROFILE = "67a2a8c7-0749-444d-b5be-839d068ccff6";
+				PROVISIONING_PROFILE_SPECIFIER = "App Development";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

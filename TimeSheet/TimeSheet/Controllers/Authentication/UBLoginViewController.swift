@@ -8,6 +8,7 @@
 
 import UIKit
 import Material
+import ReachabilitySwift
 
 class UBLoginViewController: UIViewController {
 
@@ -32,6 +33,7 @@ class UBLoginViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         UIApplication.shared.statusBarStyle = .lightContent
+        ReachabilityManager.shared.listener = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -98,6 +100,10 @@ extension UBLoginViewController {
     }
     
     fileprivate func login(credential: Credential) {
+        guard ReachabilityManager.shared.isReachable else {
+            print("No internet")
+            return
+        }
         signInButton.isEnabled = false
         RequestManager.shared.login(credential: credential) { [unowned self] (result) in
             switch result {
@@ -114,6 +120,12 @@ extension UBLoginViewController {
             }
             self.signInButton.isEnabled = true
         }
+    }
+}
+
+extension UBLoginViewController: NetworkStatusListener {
+    func networkStatusDidChange(status: Reachability.NetworkStatus) {
+        print(status)
     }
 }
 
