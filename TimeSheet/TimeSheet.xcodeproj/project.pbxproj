@@ -74,6 +74,8 @@
 		6A8A84611E95EF9800290D63 /* UBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8A845F1E95EF9800290D63 /* UBHomeViewController.swift */; };
 		6A8A84631E95EFD600290D63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A8A84621E95EFD600290D63 /* Assets.xcassets */; };
 		6A8A84641E95EFD600290D63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A8A84621E95EFD600290D63 /* Assets.xcassets */; };
+		6ABF9D5D1EAE772F002D9261 /* BadgeSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABF9D5C1EAE772F002D9261 /* BadgeSwift.swift */; };
+		6ABF9D5E1EAE772F002D9261 /* BadgeSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABF9D5C1EAE772F002D9261 /* BadgeSwift.swift */; };
 		6AC17F461E90DD0600013193 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC17F451E90DD0600013193 /* Constants.swift */; };
 		6AC17F471E90DD0600013193 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC17F451E90DD0600013193 /* Constants.swift */; };
 		6AC17F491E90DD1000013193 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC17F481E90DD1000013193 /* Styles.swift */; };
@@ -152,6 +154,7 @@
 		6A8A845B1E95EF3D00290D63 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		6A8A845F1E95EF9800290D63 /* UBHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UBHomeViewController.swift; sourceTree = "<group>"; };
 		6A8A84621E95EFD600290D63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6ABF9D5C1EAE772F002D9261 /* BadgeSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeSwift.swift; sourceTree = "<group>"; };
 		6AC17F451E90DD0600013193 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6AC17F481E90DD1000013193 /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		6AC17F4B1E90F1BC00013193 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -310,6 +313,7 @@
 		6A86F62B1E9019660034C28D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				6ABF9D5B1EAE772F002D9261 /* Third parties */,
 				6AC17F431E90DCDF00013193 /* Networking */,
 				6AC17F441E90DCDF00013193 /* Utilities */,
 				6A86F62C1E9019660034C28D /* Fonts */,
@@ -415,6 +419,14 @@
 				6A8A845F1E95EF9800290D63 /* UBHomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		6ABF9D5B1EAE772F002D9261 /* Third parties */ = {
+			isa = PBXGroup;
+			children = (
+				6ABF9D5C1EAE772F002D9261 /* BadgeSwift.swift */,
+			);
+			path = "Third parties";
 			sourceTree = "<group>";
 		};
 		6AC17F431E90DCDF00013193 /* Networking */ = {
@@ -755,6 +767,7 @@
 				6AC17F461E90DD0600013193 /* Constants.swift in Sources */,
 				6A8A843D1E95EE9F00290D63 /* UBLoginViewController.swift in Sources */,
 				6A11374D1E96BC3300BF14B3 /* TSForgetPasswordViewController.swift in Sources */,
+				6ABF9D5D1EAE772F002D9261 /* BadgeSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,6 +818,7 @@
 				6AC17F471E90DD0600013193 /* Constants.swift in Sources */,
 				6A8A843E1E95EE9F00290D63 /* UBLoginViewController.swift in Sources */,
 				6A11374E1E96BC3300BF14B3 /* TSForgetPasswordViewController.swift in Sources */,
+				6ABF9D5E1EAE772F002D9261 /* BadgeSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
