@@ -7,44 +7,49 @@ class CTMLogoutViewController: UIViewController {
     // IBOutlets
     @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var titleCancelButton: UIButton!
     @IBOutlet weak var noticeLabel: UILabel!
     @IBOutlet weak var cancelDisconnectButton: UIButton!
     @IBOutlet weak var disconnectButton: UIButton!
     @IBOutlet weak var alertView: UIView!
-    
-    
-    var cancelClick:(()->Void)!
-    var disconnectClick:(()->Void)!
+    // MARK: - Open variable
+    open var cancelClick:(()->Void)?
+    open var disconnectClick:(()->Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initUI()
     }
     
     init(frame: CGRect) {
         super.init(nibName: "CTMLogoutViewController", bundle: nil)
         view.frame = frame
-        initUI()
     }
     
-    func presentView(parentViewController: UIViewController) {
+    open func presentView(parentViewController: UIViewController,
+                     title: String,
+                     content: String,
+                     cancelButtonTitle: String = "Cancel",
+                     okButtonTitle: String = "Ok") {
+        titleLabel.text = title
+        noticeLabel.text = content
+        cancelDisconnectButton.setTitle(cancelButtonTitle, for: .normal)
+        disconnectButton.setTitle(okButtonTitle, for: .normal)
+        
         parentViewController.addChildViewController(self)
         parentViewController.view.addSubview(self.view)
-        parentViewController.view.bringSubviewToFront(self.view)
-        self.didMoveToParentViewController(parentViewController)
+        parentViewController.view.bringSubview(toFront: self.view)
+        self.didMove(toParentViewController: parentViewController)
         view.alpha = 0.0
-        UIView.animateWithDuration(0.25) {
+        UIView.animate(withDuration: 0.25) {
             self.view.alpha = 1.0
         }
     }
     
     private func closeView() {
-        UIView.animateWithDuration(0.35,
+        UIView.animate(withDuration: 0.35,
                                    delay: 0,
                                    usingSpringWithDamping: 1,
                                    initialSpringVelocity: 0.5,
-                                   options: .CurveEaseOut,
+                                   options: .curveEaseOut,
                                    animations: {
                                     self.view.alpha = 0.0
         }) { [unowned self] (finished) in
@@ -60,14 +65,14 @@ class CTMLogoutViewController: UIViewController {
     
     @IBAction func cancelDisconnectPressed(sender: AnyObject) {
         closeView()
-        
+        guard let cancleDidClick = cancelClick else { return }
+        cancleDidClick()
     }
     
     @IBAction func disconnectPressed(sender: AnyObject) {
         closeView()
-        if disconnectButton != nil {
-            disconnectClick()
-        }
+        guard let disconnectDidClick = disconnectClick else { return }
+        disconnectDidClick()
     }
     
 }
@@ -75,10 +80,6 @@ class CTMLogoutViewController: UIViewController {
 // MARK: PRIVATE METHOD
 private extension CTMLogoutViewController {
     func initUI() {
-        titleView.backgroundColor = UIColor(hex: Color.titleHeaderBackground)
-        titleLabel.textColor = UIColor(hex: Color.titleHeaderText)
-        noticeLabel.textColor = UIColor(hex: Color.contentDetailNews)
-        cancelDisconnectButton.setTitleColor(UIColor(hex: Color.contentDetailNews), forState: .Normal)
-        disconnectButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+
     }
 }

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,13 +10,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CTMLogoutViewController" customModule="Chantier" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CTMLogoutViewController" customModule="TimeSheet_Preprod" customModuleProvider="target">
             <connections>
                 <outlet property="alertView" destination="c6O-mN-po0" id="d63-aP-4M9"/>
                 <outlet property="cancelDisconnectButton" destination="NfU-GH-fza" id="YRF-fS-VUx"/>
                 <outlet property="disconnectButton" destination="b3s-EV-w3D" id="wif-fX-JdO"/>
                 <outlet property="noticeLabel" destination="MsU-dm-d24" id="xxz-9Y-0Zd"/>
-                <outlet property="titleCancelButton" destination="Arh-Rz-QOX" id="b0i-ch-n2z"/>
                 <outlet property="titleLabel" destination="xLh-yx-DHp" id="n3V-E2-vuq"/>
                 <outlet property="titleView" destination="m2z-TL-Nt2" id="PnG-sr-9Wm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -28,97 +27,69 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6O-mN-po0">
-                    <rect key="frame" x="20" y="244" width="335" height="180"/>
+                    <rect key="frame" x="20" y="233" width="335" height="201"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2z-TL-Nt2">
-                            <rect key="frame" x="0.0" y="0.0" width="335" height="45"/>
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="67"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLh-yx-DHp">
-                                    <rect key="frame" x="145" y="12" width="44" height="22"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARE YOU SURE TO LOGOUT ? " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLh-yx-DHp">
+                                    <rect key="frame" x="45" y="23" width="244" height="21"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="profile_disconnect_title"/>
-                                    </userDefinedRuntimeAttributes>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arh-Rz-QOX">
-                                    <rect key="frame" x="296" y="7" width="31" height="31"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="Arh-Rz-QOX" secondAttribute="height" multiplier="1:1" id="05X-Vi-xwM"/>
-                                    </constraints>
-                                    <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                    <inset key="imageEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
-                                    <state key="normal" image="menu_close"/>
-                                    <connections>
-                                        <action selector="cancelDisconnectPressed:" destination="-1" eventType="touchUpInside" id="I6W-Zv-emb"/>
-                                    </connections>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="xLh-yx-DHp" firstAttribute="centerY" secondItem="m2z-TL-Nt2" secondAttribute="centerY" id="JXF-gJ-Fhc"/>
-                                <constraint firstItem="Arh-Rz-QOX" firstAttribute="centerY" secondItem="m2z-TL-Nt2" secondAttribute="centerY" id="NGg-An-H68"/>
-                                <constraint firstItem="Arh-Rz-QOX" firstAttribute="height" secondItem="m2z-TL-Nt2" secondAttribute="height" multiplier="35:50" id="SCK-Ia-uKi"/>
-                                <constraint firstAttribute="trailing" secondItem="Arh-Rz-QOX" secondAttribute="trailing" constant="8" id="auX-Of-V3P"/>
                                 <constraint firstItem="xLh-yx-DHp" firstAttribute="centerX" secondItem="m2z-TL-Nt2" secondAttribute="centerX" id="jm7-Gf-sxa"/>
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3s-EV-w3D">
-                            <rect key="frame" x="183" y="118.5" width="140" height="46.5"/>
-                            <color key="backgroundColor" red="0.6588235294" green="0.0" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="autoFontScale" value="YES"/>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="profile_menu_sign_out"/>
-                            </userDefinedRuntimeAttributes>
+                            <rect key="frame" x="168" y="145.5" width="167" height="55.5"/>
+                            <color key="backgroundColor" red="0.32091641609999999" green="0.44845513799999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Logout">
+                                <color key="titleColor" red="0.98431116340000002" green="0.98043757679999999" blue="0.98022896049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
                             <connections>
-                                <action selector="disconnectPressed:" destination="-1" eventType="touchUpInside" id="sxA-Gr-bnn"/>
+                                <action selector="disconnectPressedWithSender:" destination="-1" eventType="touchUpInside" id="bZV-zj-Dfr"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfU-GH-fza">
-                            <rect key="frame" x="12" y="118.5" width="140" height="46.5"/>
+                            <rect key="frame" x="0.0" y="145.5" width="167" height="55.5"/>
+                            <color key="backgroundColor" red="0.32091641609999999" green="0.44845513799999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="NfU-GH-fza" secondAttribute="height" multiplier="3:1" id="Gle-SZ-jf6"/>
                             </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="autoFontScale" value="YES"/>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="profile_title_cancel"/>
-                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                    <real key="value" value="0.5"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                    <color key="value" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
+                            <state key="normal" title="Cancle">
+                                <color key="titleColor" red="0.98431116340000002" green="0.98043757679999999" blue="0.98022896049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
                             <connections>
-                                <action selector="cancelDisconnectPressed:" destination="-1" eventType="touchUpInside" id="lLo-ZN-Dae"/>
+                                <action selector="cancelDisconnectPressedWithSender:" destination="-1" eventType="touchUpInside" id="DKL-cJ-l6L"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsU-dm-d24">
-                            <rect key="frame" x="12" y="57" width="311" height="51.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you log out you will need to fill in your account and password to authenticate again " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsU-dm-d24">
+                            <rect key="frame" x="12" y="82" width="311" height="33.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="profile_disconnect_content"/>
-                            </userDefinedRuntimeAttributes>
                         </label>
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="b3s-EV-w3D" firstAttribute="width" secondItem="NfU-GH-fza" secondAttribute="width" id="0DU-Ae-dxj"/>
-                        <constraint firstItem="m2z-TL-Nt2" firstAttribute="height" secondItem="c6O-mN-po0" secondAttribute="height" multiplier="50:200" id="4Wm-fi-cn6"/>
+                        <constraint firstItem="m2z-TL-Nt2" firstAttribute="height" secondItem="c6O-mN-po0" secondAttribute="height" multiplier="1:3" id="4Wm-fi-cn6"/>
                         <constraint firstItem="m2z-TL-Nt2" firstAttribute="top" secondItem="c6O-mN-po0" secondAttribute="top" id="4e6-Nq-F5Q"/>
-                        <constraint firstItem="MsU-dm-d24" firstAttribute="top" secondItem="m2z-TL-Nt2" secondAttribute="bottom" constant="12" id="4h1-Ra-1Re"/>
+                        <constraint firstItem="MsU-dm-d24" firstAttribute="top" secondItem="m2z-TL-Nt2" secondAttribute="bottom" constant="15" id="4h1-Ra-1Re"/>
                         <constraint firstItem="m2z-TL-Nt2" firstAttribute="leading" secondItem="c6O-mN-po0" secondAttribute="leading" id="61g-Ma-hm8"/>
-                        <constraint firstItem="NfU-GH-fza" firstAttribute="width" secondItem="c6O-mN-po0" secondAttribute="width" multiplier="140:335" id="9kG-sZ-dyi"/>
-                        <constraint firstAttribute="bottom" secondItem="NfU-GH-fza" secondAttribute="bottom" constant="15" id="Asj-b5-nv4"/>
-                        <constraint firstItem="b3s-EV-w3D" firstAttribute="trailing" secondItem="MsU-dm-d24" secondAttribute="trailing" id="GLd-XS-151"/>
+                        <constraint firstAttribute="bottom" secondItem="NfU-GH-fza" secondAttribute="bottom" id="Asj-b5-nv4"/>
                         <constraint firstItem="b3s-EV-w3D" firstAttribute="top" secondItem="NfU-GH-fza" secondAttribute="top" id="IFl-zy-SuT"/>
+                        <constraint firstAttribute="trailing" secondItem="b3s-EV-w3D" secondAttribute="trailing" id="PTd-oE-Wbr"/>
                         <constraint firstItem="MsU-dm-d24" firstAttribute="leading" secondItem="c6O-mN-po0" secondAttribute="leading" constant="12" id="S8Q-cN-dzv"/>
-                        <constraint firstItem="NfU-GH-fza" firstAttribute="leading" secondItem="MsU-dm-d24" secondAttribute="leading" id="Uso-UF-LFX"/>
+                        <constraint firstItem="NfU-GH-fza" firstAttribute="leading" secondItem="c6O-mN-po0" secondAttribute="leading" id="UkI-ya-mS3"/>
                         <constraint firstAttribute="trailing" secondItem="MsU-dm-d24" secondAttribute="trailing" constant="12" id="VM2-jw-RdG"/>
-                        <constraint firstItem="NfU-GH-fza" firstAttribute="top" secondItem="MsU-dm-d24" secondAttribute="bottom" constant="10" id="XsP-gn-7CN"/>
+                        <constraint firstItem="NfU-GH-fza" firstAttribute="top" secondItem="MsU-dm-d24" secondAttribute="bottom" constant="30" id="XsP-gn-7CN"/>
+                        <constraint firstItem="b3s-EV-w3D" firstAttribute="width" secondItem="c6O-mN-po0" secondAttribute="width" multiplier="1/2" constant="-0.5" id="hqg-Rh-VEm"/>
                         <constraint firstAttribute="trailing" secondItem="m2z-TL-Nt2" secondAttribute="trailing" id="vdO-id-d2c"/>
                         <constraint firstItem="b3s-EV-w3D" firstAttribute="height" secondItem="NfU-GH-fza" secondAttribute="height" id="vhv-OU-lrU"/>
                     </constraints>
@@ -129,14 +100,11 @@
                 <constraint firstAttribute="trailing" secondItem="c6O-mN-po0" secondAttribute="trailing" constant="20" id="EMu-dH-kwq"/>
                 <constraint firstItem="c6O-mN-po0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="TNw-Ta-drC"/>
                 <constraint firstItem="c6O-mN-po0" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="UFF-7M-3T9"/>
-                <constraint firstItem="c6O-mN-po0" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="180:667" id="b1g-DR-e77"/>
+                <constraint firstItem="c6O-mN-po0" firstAttribute="height" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="180:667" id="b1g-DR-e77"/>
                 <constraint firstItem="c6O-mN-po0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="c2h-wI-hPT"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <point key="canvasLocation" x="237.5" y="306.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="menu_close" width="34" height="34"/>
-    </resources>
 </document>

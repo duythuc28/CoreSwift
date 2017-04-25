@@ -172,7 +172,7 @@
             <objects>
                 <navigationController storyboardIdentifier="UBNavigationHomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="Ulh-MZ-Ttq" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="oyB-cZ-Bk0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oyB-cZ-Bk0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.53490519523620605" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

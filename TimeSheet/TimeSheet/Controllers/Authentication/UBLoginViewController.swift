@@ -50,15 +50,18 @@ class UBLoginViewController: UIViewController {
     
     // MARK: - Action
     @IBAction func loginButtonClick(_ sender: Any) {
-        if Utilities.isValidEmail(email: emailTextField.text!) {
-            isEmailError = false
-            let credential = Credential(email: emailTextField.text!, password: passwordTextField.text!)
-            login(credential: credential)
-        } else {
-            isEmailError = true
-        }
+//        if Utilities.isValidEmail(email: emailTextField.text!) {
+//            isEmailError = false
+//            let credential = Credential(email: emailTextField.text!, password: passwordTextField.text!)
+//            login(credential: credential)
+//        } else {
+//            isEmailError = true
+//        }
 //        let credential = Credential(email: emailTextField.text!, password: passwordTextField.text!)
 //        login(credential: credential)
+        
+        let alertView = CTMLogoutViewController(frame: self.view.frame)
+        alertView.presentView(parentViewController: self, title: "ARE YOU SURE WANT TO LOGOUT ?", content: "If you logout you will need to authenticate your user name and password", cancelButtonTitle: "Cancel" , okButtonTitle: "Logout")
     }
 }
 // MARK: - Private methods
@@ -120,6 +123,7 @@ extension UBLoginViewController {
             }
             self.signInButton.isEnabled = true
         }
+    
     }
 }
 
