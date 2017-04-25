@@ -138,7 +138,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RpB-x0-Pji" customClass="BadgeSwift" customModule="TimeSheet_Preprod" customModuleProvider="target">
-                                <rect key="frame" x="173" y="322.5" width="30" height="22"/>
+                                <rect key="frame" x="173" y="324.5" width="30" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="iJ2-8N-jcf"/>
                                     <constraint firstAttribute="width" secondItem="RpB-x0-Pji" secondAttribute="height" multiplier="1:1" priority="250" constant="3" id="szt-oC-tWj"/>

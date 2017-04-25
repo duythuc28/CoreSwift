@@ -14,10 +14,10 @@
 		6A11374E1E96BC3300BF14B3 /* TSForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11374C1E96BC3300BF14B3 /* TSForgetPasswordViewController.swift */; };
 		6A4396051EAD24C600C51336 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4396041EAD24C600C51336 /* ReachabilityManager.swift */; };
 		6A4396061EAD24C600C51336 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4396041EAD24C600C51336 /* ReachabilityManager.swift */; };
-		6A717E2F1EAFA82F00D76411 /* CTMLogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A717E2D1EAFA82F00D76411 /* CTMLogoutViewController.swift */; };
-		6A717E301EAFA82F00D76411 /* CTMLogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A717E2D1EAFA82F00D76411 /* CTMLogoutViewController.swift */; };
-		6A717E311EAFA82F00D76411 /* CTMLogoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A717E2E1EAFA82F00D76411 /* CTMLogoutViewController.xib */; };
-		6A717E321EAFA82F00D76411 /* CTMLogoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A717E2E1EAFA82F00D76411 /* CTMLogoutViewController.xib */; };
+		6A717E2F1EAFA82F00D76411 /* UBLogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A717E2D1EAFA82F00D76411 /* UBLogoutViewController.swift */; };
+		6A717E301EAFA82F00D76411 /* UBLogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A717E2D1EAFA82F00D76411 /* UBLogoutViewController.swift */; };
+		6A717E311EAFA82F00D76411 /* UBLogoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A717E2E1EAFA82F00D76411 /* UBLogoutViewController.xib */; };
+		6A717E321EAFA82F00D76411 /* UBLogoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A717E2E1EAFA82F00D76411 /* UBLogoutViewController.xib */; };
 		6A7C5C901E915A7900396AC7 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C5C8F1E915A7900396AC7 /* RequestManager.swift */; };
 		6A7C5C911E915A7900396AC7 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C5C8F1E915A7900396AC7 /* RequestManager.swift */; };
 		6A7FA2801E96BA500043A25D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7FA27F1E96BA500043A25D /* Utilities.swift */; };
@@ -119,8 +119,8 @@
 		64DE9B03D43CA2BB047B44C5 /* Pods-TimeSheet_Prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet_Prod.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeSheet_Prod/Pods-TimeSheet_Prod.release.xcconfig"; sourceTree = "<group>"; };
 		6A11374C1E96BC3300BF14B3 /* TSForgetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		6A4396041EAD24C600C51336 /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
-		6A717E2D1EAFA82F00D76411 /* CTMLogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTMLogoutViewController.swift; path = "TimeSheet/Views /CTMLogoutViewController.swift"; sourceTree = SOURCE_ROOT; };
-		6A717E2E1EAFA82F00D76411 /* CTMLogoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CTMLogoutViewController.xib; path = "TimeSheet/Views /CTMLogoutViewController.xib"; sourceTree = SOURCE_ROOT; };
+		6A717E2D1EAFA82F00D76411 /* UBLogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UBLogoutViewController.swift; path = "TimeSheet/Views /UBLogoutViewController.swift"; sourceTree = SOURCE_ROOT; };
+		6A717E2E1EAFA82F00D76411 /* UBLogoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UBLogoutViewController.xib; path = "TimeSheet/Views /UBLogoutViewController.xib"; sourceTree = SOURCE_ROOT; };
 		6A7C5C8F1E915A7900396AC7 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		6A7FA27F1E96BA500043A25D /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6A8405AA1E996DDF00058168 /* UserProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
@@ -217,8 +217,8 @@
 		6A717E2C1EAFA82300D76411 /* Logout  */ = {
 			isa = PBXGroup;
 			children = (
-				6A717E2D1EAFA82F00D76411 /* CTMLogoutViewController.swift */,
-				6A717E2E1EAFA82F00D76411 /* CTMLogoutViewController.xib */,
+				6A717E2D1EAFA82F00D76411 /* UBLogoutViewController.swift */,
+				6A717E2E1EAFA82F00D76411 /* UBLogoutViewController.xib */,
 			);
 			name = "Logout ";
 			sourceTree = "<group>";
@@ -612,7 +612,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A717E311EAFA82F00D76411 /* CTMLogoutViewController.xib in Resources */,
+				6A717E311EAFA82F00D76411 /* UBLogoutViewController.xib in Resources */,
 				6A86F64B1E9022CA0034C28D /* Authentication.storyboard in Resources */,
 				6A8A84541E95EEFE00290D63 /* UBLeftMenuCell.xib in Resources */,
 				6A85B8D31E9898DF00F9706F /* TSLeftMenuCell.xib in Resources */,
@@ -644,7 +644,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A717E321EAFA82F00D76411 /* CTMLogoutViewController.xib in Resources */,
+				6A717E321EAFA82F00D76411 /* UBLogoutViewController.xib in Resources */,
 				6A86F64C1E9022CA0034C28D /* Authentication.storyboard in Resources */,
 				6A8A84551E95EEFE00290D63 /* UBLeftMenuCell.xib in Resources */,
 				6A85B8D41E9898DF00F9706F /* TSLeftMenuCell.xib in Resources */,
@@ -783,7 +783,7 @@
 				6AC17F4F1E90FDC300013193 /* Cached.swift in Sources */,
 				6A8405BD1E996F0800058168 /* TSUserProfileViewController.swift in Sources */,
 				6AC17F461E90DD0600013193 /* Constants.swift in Sources */,
-				6A717E2F1EAFA82F00D76411 /* CTMLogoutViewController.swift in Sources */,
+				6A717E2F1EAFA82F00D76411 /* UBLogoutViewController.swift in Sources */,
 				6A8A843D1E95EE9F00290D63 /* UBLoginViewController.swift in Sources */,
 				6A11374D1E96BC3300BF14B3 /* TSForgetPasswordViewController.swift in Sources */,
 				6ABF9D5D1EAE772F002D9261 /* BadgeSwift.swift in Sources */,
@@ -835,7 +835,7 @@
 				6AC17F501E90FDC300013193 /* Cached.swift in Sources */,
 				6A8405BE1E996F0800058168 /* TSUserProfileViewController.swift in Sources */,
 				6AC17F471E90DD0600013193 /* Constants.swift in Sources */,
-				6A717E301EAFA82F00D76411 /* CTMLogoutViewController.swift in Sources */,
+				6A717E301EAFA82F00D76411 /* UBLogoutViewController.swift in Sources */,
 				6A8A843E1E95EE9F00290D63 /* UBLoginViewController.swift in Sources */,
 				6A11374E1E96BC3300BF14B3 /* TSForgetPasswordViewController.swift in Sources */,
 				6ABF9D5E1EAE772F002D9261 /* BadgeSwift.swift in Sources */,

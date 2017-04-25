@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CTMLogoutViewController" customModule="TimeSheet_Preprod" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UBLogoutViewController" customModule="TimeSheet_Preprod" customModuleProvider="target">
             <connections>
                 <outlet property="alertView" destination="c6O-mN-po0" id="d63-aP-4M9"/>
                 <outlet property="cancelDisconnectButton" destination="NfU-GH-fza" id="YRF-fS-VUx"/>
@@ -33,7 +33,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="335" height="67"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARE YOU SURE TO LOGOUT ? " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLh-yx-DHp">
-                                    <rect key="frame" x="45" y="23" width="244" height="21"/>
+                                    <rect key="frame" x="45" y="23.5" width="244" height="21"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>

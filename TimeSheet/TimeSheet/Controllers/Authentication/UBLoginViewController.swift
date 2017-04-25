@@ -60,7 +60,7 @@ class UBLoginViewController: UIViewController {
 //        let credential = Credential(email: emailTextField.text!, password: passwordTextField.text!)
 //        login(credential: credential)
         
-        let alertView = CTMLogoutViewController(frame: self.view.frame)
+        let alertView = UBLogoutViewController(frame: self.view.frame)
         alertView.presentView(parentViewController: self, title: "ARE YOU SURE WANT TO LOGOUT ?", content: "If you logout you will need to authenticate your user name and password", cancelButtonTitle: "Cancel" , okButtonTitle: "Logout")
     }
 }

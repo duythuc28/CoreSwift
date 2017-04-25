@@ -2,7 +2,7 @@
 
 import UIKit
 
-class CTMLogoutViewController: UIViewController {
+class UBLogoutViewController: UIViewController {
 
     // IBOutlets
     @IBOutlet weak var titleView: UIView!
@@ -20,7 +20,7 @@ class CTMLogoutViewController: UIViewController {
     }
     
     init(frame: CGRect) {
-        super.init(nibName: "CTMLogoutViewController", bundle: nil)
+        super.init(nibName: "UBLogoutViewController", bundle: nil)
         view.frame = frame
     }
     
@@ -78,7 +78,7 @@ class CTMLogoutViewController: UIViewController {
 }
 
 // MARK: PRIVATE METHOD
-private extension CTMLogoutViewController {
+private extension UBLogoutViewController {
     func initUI() {
 
     }
