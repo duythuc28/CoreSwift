@@ -32,11 +32,58 @@ extension Token {
 
 struct ErrorResponse: Decodable {
     let responseMessage: String
-    let status: String
     
     static func decode(_ json: JSON) -> Decoded<ErrorResponse> {
         return curry(ErrorResponse.init)
         <^> json <| "message"
-        <*> json <| "status"
+    }
+}
+
+struct HashtagItem: Decodable {
+    let value: String
+    static func decode(_ json: JSON) -> Decoded<HashtagItem> {
+        return curry(HashtagItem.init)
+            <^> json <| "value"
+    }
+
+}
+
+struct Hashtag: Decodable {
+    let hashtagList: [HashtagItem]
+    let maxHashTag: Int
+    let dynamicHashTag: Bool
+    
+    static func decode(_ json: JSON) -> Decoded<Hashtag> {
+        return curry(Hashtag.init)
+            <^> json <|| "hashtagList"
+            <*> json <| "maxhashtag"
+            <*> json <| "dynamichashtag"
+    }
+}
+
+enum MediaType {
+    case image, video
+}
+
+struct Media {
+    
+    let name: String
+    let file: Data
+    let type: MediaType
+    init (name: String, file: Data, type: MediaType) {
+        self.name = name
+        self.file = file
+        self.type = type
+    }
+}
+
+struct UploadMedia: Decodable {
+    let name: String
+    let url: String
+    
+    static func decode(_ json: JSON) -> Decoded<UploadMedia> {
+        return curry(UploadMedia.init)
+            <^> json <| "filename"
+            <*> json <| "href"
     }
 }
