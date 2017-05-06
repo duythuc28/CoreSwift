@@ -13,7 +13,7 @@ import ReachabilitySwift
 class UBLoginViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: ErrorTextField!
-    @IBOutlet weak var passwordTextField: TextField!
+    @IBOutlet weak var passwordTextField: CustomTextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var passwordTopConstraint: NSLayoutConstraint!
     var isEmailError: Bool = false {
@@ -78,6 +78,7 @@ extension UBLoginViewController {
         emailTextField.addLeftIcon(UIImage(named: "login_email"), frame: CGRect(x: 0, y: 0, w: 28, h: 28), imageSize: CGSize(width: 28, height: 28))
         emailTextField.detail = "Error, incorrect email!"
         emailTextField.detailColor = UIColor.red
+        
         emailTextField.delegate = self
         
         // Setup password textfield
@@ -85,6 +86,10 @@ extension UBLoginViewController {
         passwordTextField.placeholderActiveColor = UIColor.white
         passwordTextField.placeholderNormalColor = UIColor.white
         passwordTextField.placeholderAnimation = .hidden
+        passwordTextField.placeholderLabel.isHidden = true
+//        passwordTextField.label
+        passwordTextField.attributedPlaceholder =
+            NSAttributedString(string: "placeholder text", attributes: [NSForegroundColorAttributeName : UIColor.white])
         passwordTextField.dividerActiveColor = UIColor.white
         passwordTextField.dividerNormalColor = UIColor.white
         passwordTextField.addLeftIcon(UIImage(named: "login_password"), frame: CGRect(x: 0, y: 0, w: 28, h: 28), imageSize: CGSize(width: 28, height: 28))
