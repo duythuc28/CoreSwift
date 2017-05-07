@@ -46,7 +46,7 @@ extension TSForgetPasswordViewController {
         emailTextField.dividerActiveColor = UIColor.white
         emailTextField.dividerNormalColor = UIColor.white
         emailTextField.textColor = UIColor.white
-        emailTextField.addLeftIcon(UIImage(named: "login_email"), frame: CGRect(x: 0, y: 0, w: 28, h: 28), imageSize: CGSize(width: 28, height: 28))
+        emailTextField.addLeftIcon(UIImage(named: "login_email"), frame: CGRect(x: 0, y: 0, width: 28, height: 28), imageSize: CGSize(width: 28, height: 28))
         emailTextField.detail = "Error, incorrect email!"
         emailTextField.detailColor = UIColor.red
         emailTextField.delegate = self

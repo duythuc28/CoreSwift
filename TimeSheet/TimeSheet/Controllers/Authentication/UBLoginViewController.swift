@@ -60,8 +60,12 @@ class UBLoginViewController: UIViewController {
 //        let credential = Credential(email: emailTextField.text!, password: passwordTextField.text!)
 //        login(credential: credential)
         
-        let alertView = UBLogoutViewController(frame: self.view.frame)
-        alertView.presentView(parentViewController: self, title: "ARE YOU SURE WANT TO LOGOUT ?", content: "If you logout you will need to authenticate your user name and password", cancelButtonTitle: "Cancel" , okButtonTitle: "Logout")
+//        let alertView = UBLogoutViewController(frame: self.view.frame)
+//        alertView.presentView(parentViewController: self, title: "ARE YOU SURE WANT TO LOGOUT ?", content: "If you logout you will need to authenticate your user name and password", cancelButtonTitle: "Cancel" , okButtonTitle: "Logout")
+        self.showAlert(title: "Test", message: "Hello con ba co", cancelTitle: "Cancle", otherButtonTitle: "Logout", otherAction: {
+            // Logout
+            print("Logout ba cao")
+        })
     }
 }
 // MARK: - Private methods
@@ -75,7 +79,7 @@ extension UBLoginViewController {
         emailTextField.dividerActiveColor = UIColor.white
         emailTextField.dividerNormalColor = UIColor.white
         emailTextField.textColor = UIColor.white
-        emailTextField.addLeftIcon(UIImage(named: "login_email"), frame: CGRect(x: 0, y: 0, w: 28, h: 28), imageSize: CGSize(width: 28, height: 28))
+        emailTextField.addLeftIcon(UIImage(named: "login_email"), frame: CGRect(x: 0, y: 0, width: 28, height: 28), imageSize: CGSize(width: 28, height: 28))
         emailTextField.detail = "Error, incorrect email!"
         emailTextField.detailColor = UIColor.red
         
@@ -92,7 +96,7 @@ extension UBLoginViewController {
             NSAttributedString(string: "placeholder text", attributes: [NSForegroundColorAttributeName : UIColor.white])
         passwordTextField.dividerActiveColor = UIColor.white
         passwordTextField.dividerNormalColor = UIColor.white
-        passwordTextField.addLeftIcon(UIImage(named: "login_password"), frame: CGRect(x: 0, y: 0, w: 28, h: 28), imageSize: CGSize(width: 28, height: 28))
+        passwordTextField.addLeftIcon(UIImage(named: "login_password"), frame: CGRect(x: 0, y: 0, width: 28, height: 28), imageSize: CGSize(width: 28, height: 28))
         // Sign In button
         signInButton.layer.cornerRadius = 20 * Constants.RATIO_WIDTH
     }
@@ -118,9 +122,10 @@ extension UBLoginViewController {
             case .success(let token):
                 print ("Token \(token)")
                 // TODO: Get user info
-                let homeStoryboard = UIStoryboard(name: Storyboards.home , bundle: nil)
-                let containerViewController = homeStoryboard.instantiateViewController(withIdentifier: ControllerIdentifier.container)
-                self.navigationController?.pushViewController(containerViewController, animated: true)
+//                let homeStoryboard = UIStoryboard(name: Storyboards.home , bundle: nil)
+//                let containerViewController = homeStoryboard.instantiateViewController(withIdentifier: ControllerIdentifier.container)
+//                self.navigationController?.pushViewController(containerViewController, animated: true)
+                
                 break
             case .failure(let error):
                 print ("Error \(error.responseMessage)")

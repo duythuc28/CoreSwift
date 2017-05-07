@@ -14,6 +14,14 @@
 		6A11374E1E96BC3300BF14B3 /* TSForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11374C1E96BC3300BF14B3 /* TSForgetPasswordViewController.swift */; };
 		6A4396051EAD24C600C51336 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4396041EAD24C600C51336 /* ReachabilityManager.swift */; };
 		6A4396061EAD24C600C51336 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4396041EAD24C600C51336 /* ReachabilityManager.swift */; };
+		6A6644191EBD9EA70078E77D /* PopupDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6644181EBD9EA70078E77D /* PopupDialogView.swift */; };
+		6A66441A1EBD9EA70078E77D /* PopupDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6644181EBD9EA70078E77D /* PopupDialogView.swift */; };
+		6A66441C1EBDAA620078E77D /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A66441B1EBDAA620078E77D /* UIViewController+Alert.swift */; };
+		6A66441D1EBDAA620078E77D /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A66441B1EBDAA620078E77D /* UIViewController+Alert.swift */; };
+		6A6644201EBDAC340078E77D /* TSPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A66441E1EBDAC340078E77D /* TSPopupViewController.swift */; };
+		6A6644211EBDAC340078E77D /* TSPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A66441E1EBDAC340078E77D /* TSPopupViewController.swift */; };
+		6A6644221EBDAC340078E77D /* TSPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A66441F1EBDAC340078E77D /* TSPopupViewController.xib */; };
+		6A6644231EBDAC340078E77D /* TSPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A66441F1EBDAC340078E77D /* TSPopupViewController.xib */; };
 		6A717E2F1EAFA82F00D76411 /* UBLogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A717E2D1EAFA82F00D76411 /* UBLogoutViewController.swift */; };
 		6A717E301EAFA82F00D76411 /* UBLogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A717E2D1EAFA82F00D76411 /* UBLogoutViewController.swift */; };
 		6A717E311EAFA82F00D76411 /* UBLogoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A717E2E1EAFA82F00D76411 /* UBLogoutViewController.xib */; };
@@ -22,6 +30,50 @@
 		6A7C5C911E915A7900396AC7 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C5C8F1E915A7900396AC7 /* RequestManager.swift */; };
 		6A7FA2801E96BA500043A25D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7FA27F1E96BA500043A25D /* Utilities.swift */; };
 		6A7FA2811E96BA500043A25D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7FA27F1E96BA500043A25D /* Utilities.swift */; };
+		6A80647A1EBF32FB00236668 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 6A8064621EBF32FB00236668 /* .gitkeep */; };
+		6A80647B1EBF32FB00236668 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 6A8064621EBF32FB00236668 /* .gitkeep */; };
+		6A80647C1EBF32FB00236668 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064641EBF32FB00236668 /* FXBlurView.m */; };
+		6A80647D1EBF32FB00236668 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064641EBF32FB00236668 /* FXBlurView.m */; };
+		6A80647E1EBF32FB00236668 /* InteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064651EBF32FB00236668 /* InteractiveTransition.swift */; };
+		6A80647F1EBF32FB00236668 /* InteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064651EBF32FB00236668 /* InteractiveTransition.swift */; };
+		6A8064801EBF32FB00236668 /* PopupDialog+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064661EBF32FB00236668 /* PopupDialog+Keyboard.swift */; };
+		6A8064811EBF32FB00236668 /* PopupDialog+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064661EBF32FB00236668 /* PopupDialog+Keyboard.swift */; };
+		6A8064821EBF32FB00236668 /* PopupDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064671EBF32FB00236668 /* PopupDialog.swift */; };
+		6A8064831EBF32FB00236668 /* PopupDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064671EBF32FB00236668 /* PopupDialog.swift */; };
+		6A8064841EBF32FB00236668 /* PopupDialogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064681EBF32FB00236668 /* PopupDialogButton.swift */; };
+		6A8064851EBF32FB00236668 /* PopupDialogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064681EBF32FB00236668 /* PopupDialogButton.swift */; };
+		6A8064861EBF32FB00236668 /* PopupDialogContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064691EBF32FB00236668 /* PopupDialogContainerView.swift */; };
+		6A8064871EBF32FB00236668 /* PopupDialogContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064691EBF32FB00236668 /* PopupDialogContainerView.swift */; };
+		6A8064881EBF32FB00236668 /* PopupDialogDefaultButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80646A1EBF32FB00236668 /* PopupDialogDefaultButtons.swift */; };
+		6A8064891EBF32FB00236668 /* PopupDialogDefaultButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80646A1EBF32FB00236668 /* PopupDialogDefaultButtons.swift */; };
+		6A80648A1EBF32FB00236668 /* PopupDialogDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80646B1EBF32FB00236668 /* PopupDialogDefaultView.swift */; };
+		6A80648B1EBF32FB00236668 /* PopupDialogDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80646B1EBF32FB00236668 /* PopupDialogDefaultView.swift */; };
+		6A80648C1EBF32FB00236668 /* PopupDialogDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80646C1EBF32FB00236668 /* PopupDialogDefaultViewController.swift */; };
+		6A80648D1EBF32FB00236668 /* PopupDialogDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80646C1EBF32FB00236668 /* PopupDialogDefaultViewController.swift */; };
+		6A80648E1EBF32FB00236668 /* PopupDialogOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80646D1EBF32FB00236668 /* PopupDialogOverlayView.swift */; };
+		6A80648F1EBF32FB00236668 /* PopupDialogOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80646D1EBF32FB00236668 /* PopupDialogOverlayView.swift */; };
+		6A8064901EBF32FB00236668 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80646E1EBF32FB00236668 /* PresentationController.swift */; };
+		6A8064911EBF32FB00236668 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80646E1EBF32FB00236668 /* PresentationController.swift */; };
+		6A8064921EBF32FB00236668 /* PresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80646F1EBF32FB00236668 /* PresentationManager.swift */; };
+		6A8064931EBF32FB00236668 /* PresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80646F1EBF32FB00236668 /* PresentationManager.swift */; };
+		6A8064941EBF32FB00236668 /* TransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064701EBF32FB00236668 /* TransitionAnimations.swift */; };
+		6A8064951EBF32FB00236668 /* TransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064701EBF32FB00236668 /* TransitionAnimations.swift */; };
+		6A8064961EBF32FB00236668 /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064711EBF32FB00236668 /* TransitionAnimator.swift */; };
+		6A8064971EBF32FB00236668 /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064711EBF32FB00236668 /* TransitionAnimator.swift */; };
+		6A8064981EBF32FB00236668 /* TZSpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064731EBF32FB00236668 /* TZSpacerView.swift */; };
+		6A8064991EBF32FB00236668 /* TZSpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064731EBF32FB00236668 /* TZSpacerView.swift */; };
+		6A80649A1EBF32FB00236668 /* TZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064741EBF32FB00236668 /* TZStackView.swift */; };
+		6A80649B1EBF32FB00236668 /* TZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064741EBF32FB00236668 /* TZStackView.swift */; };
+		6A80649C1EBF32FB00236668 /* TZStackViewAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064751EBF32FB00236668 /* TZStackViewAlignment.swift */; };
+		6A80649D1EBF32FB00236668 /* TZStackViewAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064751EBF32FB00236668 /* TZStackViewAlignment.swift */; };
+		6A80649E1EBF32FB00236668 /* TZStackViewDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064761EBF32FB00236668 /* TZStackViewDistribution.swift */; };
+		6A80649F1EBF32FB00236668 /* TZStackViewDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064761EBF32FB00236668 /* TZStackViewDistribution.swift */; };
+		6A8064A01EBF32FB00236668 /* UIImageView+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064771EBF32FB00236668 /* UIImageView+Calculations.swift */; };
+		6A8064A11EBF32FB00236668 /* UIImageView+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064771EBF32FB00236668 /* UIImageView+Calculations.swift */; };
+		6A8064A21EBF32FB00236668 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064781EBF32FB00236668 /* UIView+Animations.swift */; };
+		6A8064A31EBF32FB00236668 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064781EBF32FB00236668 /* UIView+Animations.swift */; };
+		6A8064A41EBF32FB00236668 /* UIViewController+Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064791EBF32FB00236668 /* UIViewController+Visibility.swift */; };
+		6A8064A51EBF32FB00236668 /* UIViewController+Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8064791EBF32FB00236668 /* UIViewController+Visibility.swift */; };
 		6A8405AB1E996DDF00058168 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A8405AA1E996DDF00058168 /* UserProfile.storyboard */; };
 		6A8405AC1E996DDF00058168 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A8405AA1E996DDF00058168 /* UserProfile.storyboard */; };
 		6A8405AE1E996DEA00058168 /* TimeSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A8405AD1E996DEA00058168 /* TimeSheet.storyboard */; };
@@ -121,10 +173,38 @@
 		64DE9B03D43CA2BB047B44C5 /* Pods-TimeSheet_Prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet_Prod.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeSheet_Prod/Pods-TimeSheet_Prod.release.xcconfig"; sourceTree = "<group>"; };
 		6A11374C1E96BC3300BF14B3 /* TSForgetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		6A4396041EAD24C600C51336 /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
+		6A6644181EBD9EA70078E77D /* PopupDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogView.swift; sourceTree = "<group>"; };
+		6A66441B1EBDAA620078E77D /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		6A66441E1EBDAC340078E77D /* TSPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSPopupViewController.swift; sourceTree = "<group>"; };
+		6A66441F1EBDAC340078E77D /* TSPopupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSPopupViewController.xib; sourceTree = "<group>"; };
 		6A717E2D1EAFA82F00D76411 /* UBLogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UBLogoutViewController.swift; path = "TimeSheet/Views /UBLogoutViewController.swift"; sourceTree = SOURCE_ROOT; };
 		6A717E2E1EAFA82F00D76411 /* UBLogoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UBLogoutViewController.xib; path = "TimeSheet/Views /UBLogoutViewController.xib"; sourceTree = SOURCE_ROOT; };
 		6A7C5C8F1E915A7900396AC7 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		6A7FA27F1E96BA500043A25D /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		6A80645F1EBF31FA00236668 /* UB-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UB-Bridging-Header.h"; sourceTree = "<group>"; };
+		6A8064621EBF32FB00236668 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		6A8064631EBF32FB00236668 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		6A8064641EBF32FB00236668 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		6A8064651EBF32FB00236668 /* InteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveTransition.swift; sourceTree = "<group>"; };
+		6A8064661EBF32FB00236668 /* PopupDialog+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PopupDialog+Keyboard.swift"; sourceTree = "<group>"; };
+		6A8064671EBF32FB00236668 /* PopupDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialog.swift; sourceTree = "<group>"; };
+		6A8064681EBF32FB00236668 /* PopupDialogButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogButton.swift; sourceTree = "<group>"; };
+		6A8064691EBF32FB00236668 /* PopupDialogContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogContainerView.swift; sourceTree = "<group>"; };
+		6A80646A1EBF32FB00236668 /* PopupDialogDefaultButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogDefaultButtons.swift; sourceTree = "<group>"; };
+		6A80646B1EBF32FB00236668 /* PopupDialogDefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogDefaultView.swift; sourceTree = "<group>"; };
+		6A80646C1EBF32FB00236668 /* PopupDialogDefaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogDefaultViewController.swift; sourceTree = "<group>"; };
+		6A80646D1EBF32FB00236668 /* PopupDialogOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogOverlayView.swift; sourceTree = "<group>"; };
+		6A80646E1EBF32FB00236668 /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		6A80646F1EBF32FB00236668 /* PresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationManager.swift; sourceTree = "<group>"; };
+		6A8064701EBF32FB00236668 /* TransitionAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimations.swift; sourceTree = "<group>"; };
+		6A8064711EBF32FB00236668 /* TransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimator.swift; sourceTree = "<group>"; };
+		6A8064731EBF32FB00236668 /* TZSpacerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TZSpacerView.swift; sourceTree = "<group>"; };
+		6A8064741EBF32FB00236668 /* TZStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TZStackView.swift; sourceTree = "<group>"; };
+		6A8064751EBF32FB00236668 /* TZStackViewAlignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TZStackViewAlignment.swift; sourceTree = "<group>"; };
+		6A8064761EBF32FB00236668 /* TZStackViewDistribution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TZStackViewDistribution.swift; sourceTree = "<group>"; };
+		6A8064771EBF32FB00236668 /* UIImageView+Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Calculations.swift"; sourceTree = "<group>"; };
+		6A8064781EBF32FB00236668 /* UIView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
+		6A8064791EBF32FB00236668 /* UIViewController+Visibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Visibility.swift"; sourceTree = "<group>"; };
 		6A8405AA1E996DDF00058168 /* UserProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 		6A8405AD1E996DEA00058168 /* TimeSheet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TimeSheet.storyboard; sourceTree = "<group>"; };
 		6A8405B01E996DF700058168 /* CheckIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CheckIn.storyboard; sourceTree = "<group>"; };
@@ -217,6 +297,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6A6644141EBD9DFF0078E77D /* Dialog Popup  */ = {
+			isa = PBXGroup;
+			children = (
+				6A6644181EBD9EA70078E77D /* PopupDialogView.swift */,
+				6A66441E1EBDAC340078E77D /* TSPopupViewController.swift */,
+				6A66441F1EBDAC340078E77D /* TSPopupViewController.xib */,
+			);
+			name = "Dialog Popup ";
+			sourceTree = "<group>";
+		};
 		6A717E2C1EAFA82300D76411 /* Logout  */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +314,52 @@
 				6A717E2E1EAFA82F00D76411 /* UBLogoutViewController.xib */,
 			);
 			name = "Logout ";
+			sourceTree = "<group>";
+		};
+		6A8064601EBF32FB00236668 /* PopupDialog */ = {
+			isa = PBXGroup;
+			children = (
+				6A8064611EBF32FB00236668 /* Classes */,
+			);
+			path = PopupDialog;
+			sourceTree = "<group>";
+		};
+		6A8064611EBF32FB00236668 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6A8064621EBF32FB00236668 /* .gitkeep */,
+				6A8064631EBF32FB00236668 /* FXBlurView.h */,
+				6A8064641EBF32FB00236668 /* FXBlurView.m */,
+				6A8064651EBF32FB00236668 /* InteractiveTransition.swift */,
+				6A8064661EBF32FB00236668 /* PopupDialog+Keyboard.swift */,
+				6A8064671EBF32FB00236668 /* PopupDialog.swift */,
+				6A8064681EBF32FB00236668 /* PopupDialogButton.swift */,
+				6A8064691EBF32FB00236668 /* PopupDialogContainerView.swift */,
+				6A80646A1EBF32FB00236668 /* PopupDialogDefaultButtons.swift */,
+				6A80646B1EBF32FB00236668 /* PopupDialogDefaultView.swift */,
+				6A80646C1EBF32FB00236668 /* PopupDialogDefaultViewController.swift */,
+				6A80646D1EBF32FB00236668 /* PopupDialogOverlayView.swift */,
+				6A80646E1EBF32FB00236668 /* PresentationController.swift */,
+				6A80646F1EBF32FB00236668 /* PresentationManager.swift */,
+				6A8064701EBF32FB00236668 /* TransitionAnimations.swift */,
+				6A8064711EBF32FB00236668 /* TransitionAnimator.swift */,
+				6A8064721EBF32FB00236668 /* TZStackView */,
+				6A8064771EBF32FB00236668 /* UIImageView+Calculations.swift */,
+				6A8064781EBF32FB00236668 /* UIView+Animations.swift */,
+				6A8064791EBF32FB00236668 /* UIViewController+Visibility.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		6A8064721EBF32FB00236668 /* TZStackView */ = {
+			isa = PBXGroup;
+			children = (
+				6A8064731EBF32FB00236668 /* TZSpacerView.swift */,
+				6A8064741EBF32FB00236668 /* TZStackView.swift */,
+				6A8064751EBF32FB00236668 /* TZStackViewAlignment.swift */,
+				6A8064761EBF32FB00236668 /* TZStackViewDistribution.swift */,
+			);
+			path = TZStackView;
 			sourceTree = "<group>";
 		};
 		6A8405B31E996EA500058168 /* Check In */ = {
@@ -341,6 +477,7 @@
 				1D5EA06F1E92213C00380279 /* Screen.swift */,
 				6AC17F4E1E90FDC300013193 /* Cached.swift */,
 				6AAAF02A1EB5C2A300907568 /* TextField+Animation.swift */,
+				6A66441B1EBDAA620078E77D /* UIViewController+Alert.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -372,6 +509,7 @@
 				6A86F6351E9019660034C28D /* TimeSheet_Preprod_Info.plist */,
 				6A86F6361E9019660034C28D /* TimeSheet_Prod_Info.plist */,
 				6A8A84621E95EFD600290D63 /* Assets.xcassets */,
+				6A80645F1EBF31FA00236668 /* UB-Bridging-Header.h */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -405,6 +543,7 @@
 		6A8A84491E95EEFE00290D63 /* Views  */ = {
 			isa = PBXGroup;
 			children = (
+				6A6644141EBD9DFF0078E77D /* Dialog Popup  */,
 				6A8A844A1E95EEFE00290D63 /* Cells */,
 			);
 			path = "Views ";
@@ -444,6 +583,7 @@
 		6ABF9D5B1EAE772F002D9261 /* Third parties */ = {
 			isa = PBXGroup;
 			children = (
+				6A8064601EBF32FB00236668 /* PopupDialog */,
 				6ABF9D5C1EAE772F002D9261 /* BadgeSwift.swift */,
 			);
 			path = "Third parties";
@@ -624,6 +764,8 @@
 				6A85B8D61E98990E00F9706F /* TSHeaderLeftMenu.xib in Resources */,
 				6A8405AB1E996DDF00058168 /* UserProfile.storyboard in Resources */,
 				6A8405AE1E996DEA00058168 /* TimeSheet.storyboard in Resources */,
+				6A80647A1EBF32FB00236668 /* .gitkeep in Resources */,
+				6A6644221EBDAC340078E77D /* TSPopupViewController.xib in Resources */,
 				6A8A845C1E95EF3D00290D63 /* Home.storyboard in Resources */,
 				6A8405B11E996DF700058168 /* CheckIn.storyboard in Resources */,
 				6A8A84631E95EFD600290D63 /* Assets.xcassets in Resources */,
@@ -656,6 +798,8 @@
 				6A85B8D71E98990E00F9706F /* TSHeaderLeftMenu.xib in Resources */,
 				6A8405AC1E996DDF00058168 /* UserProfile.storyboard in Resources */,
 				6A8405AF1E996DEA00058168 /* TimeSheet.storyboard in Resources */,
+				6A80647B1EBF32FB00236668 /* .gitkeep in Resources */,
+				6A6644231EBDAC340078E77D /* TSPopupViewController.xib in Resources */,
 				6A8A845D1E95EF3D00290D63 /* Home.storyboard in Resources */,
 				6A8405B21E996DF700058168 /* CheckIn.storyboard in Resources */,
 				6A8A84641E95EFD600290D63 /* Assets.xcassets in Resources */,
@@ -764,34 +908,58 @@
 			files = (
 				6A85B8D91E98AC5300F9706F /* TableData.swift in Sources */,
 				6A8A84561E95EEFE00290D63 /* UBLeftMenuHeaderView.swift in Sources */,
+				6A80647C1EBF32FB00236668 /* FXBlurView.m in Sources */,
+				6A8064861EBF32FB00236668 /* PopupDialogContainerView.swift in Sources */,
 				6AC17F4C1E90F1BC00013193 /* User.swift in Sources */,
 				6A8A84441E95EEAE00290D63 /* UBLeftMenuViewController.swift in Sources */,
+				6A80649E1EBF32FB00236668 /* TZStackViewDistribution.swift in Sources */,
+				6A80648C1EBF32FB00236668 /* PopupDialogDefaultViewController.swift in Sources */,
 				6A4396051EAD24C600C51336 /* ReachabilityManager.swift in Sources */,
 				6A85B8DC1E98B8A000F9706F /* TSHeaderLeftMenu.swift in Sources */,
+				6A8064A21EBF32FB00236668 /* UIView+Animations.swift in Sources */,
 				6A85B8CD1E98933000F9706F /* TSLeftMenuViewController.swift in Sources */,
+				6A8064801EBF32FB00236668 /* PopupDialog+Keyboard.swift in Sources */,
+				6A8064A41EBF32FB00236668 /* UIViewController+Visibility.swift in Sources */,
+				6A8064821EBF32FB00236668 /* PopupDialog.swift in Sources */,
 				6A8A84471E95EEC700290D63 /* RequestModel.swift in Sources */,
 				6A8A84501E95EEFE00290D63 /* CellProtocol.swift in Sources */,
+				6A80647E1EBF32FB00236668 /* InteractiveTransition.swift in Sources */,
+				6A8064941EBF32FB00236668 /* TransitionAnimations.swift in Sources */,
+				6A80648E1EBF32FB00236668 /* PopupDialogOverlayView.swift in Sources */,
+				6A80649C1EBF32FB00236668 /* TZStackViewAlignment.swift in Sources */,
 				6A8A84521E95EEFE00290D63 /* UBLeftMenuCell.swift in Sources */,
 				6AC17F521E91106200013193 /* RequestService.swift in Sources */,
 				6A8A84591E95EF3300290D63 /* LeftMenuData.swift in Sources */,
 				6AC17F491E90DD1000013193 /* Styles.swift in Sources */,
 				6A85B8D11E9898DF00F9706F /* TSLeftMenuCell.swift in Sources */,
+				6A66441C1EBDAA620078E77D /* UIViewController+Alert.swift in Sources */,
+				6A8064A01EBF32FB00236668 /* UIImageView+Calculations.swift in Sources */,
+				6A6644191EBD9EA70078E77D /* PopupDialogView.swift in Sources */,
 				6A8A84601E95EF9800290D63 /* UBHomeViewController.swift in Sources */,
+				6A8064841EBF32FB00236668 /* PopupDialogButton.swift in Sources */,
+				6A80649A1EBF32FB00236668 /* TZStackView.swift in Sources */,
 				6A86F63E1E9019660034C28D /* AppDelegate.swift in Sources */,
 				6A7C5C901E915A7900396AC7 /* RequestManager.swift in Sources */,
 				6A7FA2801E96BA500043A25D /* Utilities.swift in Sources */,
+				6A8064901EBF32FB00236668 /* PresentationController.swift in Sources */,
 				1D5EA0701E92213C00380279 /* Screen.swift in Sources */,
 				6A8A84421E95EEAE00290D63 /* UBContainerViewController.swift in Sources */,
 				6A8405B71E996EC800058168 /* TSCheckInViewController.swift in Sources */,
+				6A8064921EBF32FB00236668 /* PresentationManager.swift in Sources */,
 				6A8405BA1E996ED500058168 /* TSTimeSheetViewController.swift in Sources */,
+				6A80648A1EBF32FB00236668 /* PopupDialogDefaultView.swift in Sources */,
 				6AC17F4F1E90FDC300013193 /* Cached.swift in Sources */,
+				6A6644201EBDAC340078E77D /* TSPopupViewController.swift in Sources */,
 				6A8405BD1E996F0800058168 /* TSUserProfileViewController.swift in Sources */,
+				6A8064981EBF32FB00236668 /* TZSpacerView.swift in Sources */,
 				6AC17F461E90DD0600013193 /* Constants.swift in Sources */,
+				6A8064961EBF32FB00236668 /* TransitionAnimator.swift in Sources */,
 				6A717E2F1EAFA82F00D76411 /* UBLogoutViewController.swift in Sources */,
 				6AAAF02B1EB5C2A300907568 /* TextField+Animation.swift in Sources */,
 				6A8A843D1E95EE9F00290D63 /* UBLoginViewController.swift in Sources */,
 				6A11374D1E96BC3300BF14B3 /* TSForgetPasswordViewController.swift in Sources */,
 				6ABF9D5D1EAE772F002D9261 /* BadgeSwift.swift in Sources */,
+				6A8064881EBF32FB00236668 /* PopupDialogDefaultButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -817,34 +985,58 @@
 			files = (
 				6A85B8DA1E98AC5300F9706F /* TableData.swift in Sources */,
 				6A8A84571E95EEFE00290D63 /* UBLeftMenuHeaderView.swift in Sources */,
+				6A80647D1EBF32FB00236668 /* FXBlurView.m in Sources */,
+				6A8064871EBF32FB00236668 /* PopupDialogContainerView.swift in Sources */,
 				6AC17F4D1E90F1BC00013193 /* User.swift in Sources */,
 				6A8A84451E95EEAE00290D63 /* UBLeftMenuViewController.swift in Sources */,
+				6A80649F1EBF32FB00236668 /* TZStackViewDistribution.swift in Sources */,
+				6A80648D1EBF32FB00236668 /* PopupDialogDefaultViewController.swift in Sources */,
 				6A4396061EAD24C600C51336 /* ReachabilityManager.swift in Sources */,
 				6A85B8DD1E98B8A000F9706F /* TSHeaderLeftMenu.swift in Sources */,
+				6A8064A31EBF32FB00236668 /* UIView+Animations.swift in Sources */,
 				6A85B8CE1E98933000F9706F /* TSLeftMenuViewController.swift in Sources */,
+				6A8064811EBF32FB00236668 /* PopupDialog+Keyboard.swift in Sources */,
+				6A8064A51EBF32FB00236668 /* UIViewController+Visibility.swift in Sources */,
+				6A8064831EBF32FB00236668 /* PopupDialog.swift in Sources */,
 				6A8A84481E95EEC700290D63 /* RequestModel.swift in Sources */,
 				6A8A84511E95EEFE00290D63 /* CellProtocol.swift in Sources */,
+				6A80647F1EBF32FB00236668 /* InteractiveTransition.swift in Sources */,
+				6A8064951EBF32FB00236668 /* TransitionAnimations.swift in Sources */,
+				6A80648F1EBF32FB00236668 /* PopupDialogOverlayView.swift in Sources */,
+				6A80649D1EBF32FB00236668 /* TZStackViewAlignment.swift in Sources */,
 				6A8A84531E95EEFE00290D63 /* UBLeftMenuCell.swift in Sources */,
 				6AC17F531E91106200013193 /* RequestService.swift in Sources */,
 				6A8A845A1E95EF3300290D63 /* LeftMenuData.swift in Sources */,
 				6AC17F4A1E90DD1000013193 /* Styles.swift in Sources */,
 				6A85B8D21E9898DF00F9706F /* TSLeftMenuCell.swift in Sources */,
+				6A66441D1EBDAA620078E77D /* UIViewController+Alert.swift in Sources */,
+				6A8064A11EBF32FB00236668 /* UIImageView+Calculations.swift in Sources */,
+				6A66441A1EBD9EA70078E77D /* PopupDialogView.swift in Sources */,
 				6A8A84611E95EF9800290D63 /* UBHomeViewController.swift in Sources */,
+				6A8064851EBF32FB00236668 /* PopupDialogButton.swift in Sources */,
+				6A80649B1EBF32FB00236668 /* TZStackView.swift in Sources */,
 				6A86F63F1E9019660034C28D /* AppDelegate.swift in Sources */,
 				6A7C5C911E915A7900396AC7 /* RequestManager.swift in Sources */,
 				6A7FA2811E96BA500043A25D /* Utilities.swift in Sources */,
+				6A8064911EBF32FB00236668 /* PresentationController.swift in Sources */,
 				1D5EA0711E92213C00380279 /* Screen.swift in Sources */,
 				6A8A84431E95EEAE00290D63 /* UBContainerViewController.swift in Sources */,
 				6A8405B81E996EC800058168 /* TSCheckInViewController.swift in Sources */,
+				6A8064931EBF32FB00236668 /* PresentationManager.swift in Sources */,
 				6A8405BB1E996ED500058168 /* TSTimeSheetViewController.swift in Sources */,
+				6A80648B1EBF32FB00236668 /* PopupDialogDefaultView.swift in Sources */,
 				6AC17F501E90FDC300013193 /* Cached.swift in Sources */,
+				6A6644211EBDAC340078E77D /* TSPopupViewController.swift in Sources */,
 				6A8405BE1E996F0800058168 /* TSUserProfileViewController.swift in Sources */,
+				6A8064991EBF32FB00236668 /* TZSpacerView.swift in Sources */,
 				6AC17F471E90DD0600013193 /* Constants.swift in Sources */,
+				6A8064971EBF32FB00236668 /* TransitionAnimator.swift in Sources */,
 				6A717E301EAFA82F00D76411 /* UBLogoutViewController.swift in Sources */,
 				6AAAF02C1EB5C2A300907568 /* TextField+Animation.swift in Sources */,
 				6A8A843E1E95EE9F00290D63 /* UBLoginViewController.swift in Sources */,
 				6A11374E1E96BC3300BF14B3 /* TSForgetPasswordViewController.swift in Sources */,
 				6ABF9D5E1EAE772F002D9261 /* BadgeSwift.swift in Sources */,
+				6A8064891EBF32FB00236668 /* PopupDialogDefaultButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -971,6 +1163,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f4e282dd-4da1-49c0-9afa-29fdc78bc40f";
 				PROVISIONING_PROFILE_SPECIFIER = "Dev provisioning";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/TimeSheet/SupportingFiles/UB-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -991,6 +1184,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "97819211-a7ee-4192-a2a6-a1f8178d2355";
 				PROVISIONING_PROFILE_SPECIFIER = "All Inhouse";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/TimeSheet/SupportingFiles/UB-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1068,6 +1262,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "67a2a8c7-0749-444d-b5be-839d068ccff6";
 				PROVISIONING_PROFILE_SPECIFIER = "App Development";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/TimeSheet/SupportingFiles/UB-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1088,6 +1283,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "97819211-a7ee-4192-a2a6-a1f8178d2355";
 				PROVISIONING_PROFILE_SPECIFIER = "All Inhouse";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/TimeSheet/SupportingFiles/UB-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

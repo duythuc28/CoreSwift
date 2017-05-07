@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import EZSwiftExtensions
 
 final class UBLeftMenuViewController: UIViewController {
 

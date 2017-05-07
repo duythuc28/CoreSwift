@@ -19,10 +19,14 @@ class UBLogoutViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    init(frame: CGRect) {
-        super.init(nibName: "UBLogoutViewController", bundle: nil)
-        view.frame = frame
-    }
+//    init(frame: CGRect) {
+//        super.init(nibName: "UBLogoutViewController", bundle: nil)
+//        view.frame = frame
+//    }
+//    
+//    init() {
+//         super.init(nibName: "UBLogoutViewController", bundle: nil)
+//    }
     
     open func presentView(parentViewController: UIViewController,
                      title: String,
@@ -59,9 +63,9 @@ class UBLogoutViewController: UIViewController {
         }
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     @IBAction func cancelDisconnectPressed(sender: AnyObject) {
         closeView()
